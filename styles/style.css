@@ -56,8 +56,16 @@ body {
   justify-content: center;
 }
 /* //-----PROMO----// */
-.promo {
+.promo-main {
   background: url('../img/bgs/Bg_Promo.jpg') center center no-repeat;
+}
+.promo-ourcoffee {
+  background: url('../img/bgs/Bg_OurCoffee_1.jpg') center center no-repeat;
+}
+.promo-foryourpleasure {
+  background: url('../img/bgs/Bg_ForYourPleasure_2.jpg') center center no-repeat;
+}
+.promo {
   color: #fff;
   font-weight: 700;
 }
