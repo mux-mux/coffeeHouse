@@ -29,6 +29,9 @@ p {
   max-width: 800px;
   margin: 0 auto;
 }
+.product-page-container {
+  max-width: 865px;
+}
 body {
   max-width: 1440px;
   margin: 0 auto;
@@ -188,9 +191,27 @@ body {
 .about-components {
   display: flex;
   padding: 0 50px;
-  margin: 0 auto;
+  margin: 70px auto 30px;
   gap: 80px;
   text-align: center;
+}
+/* //-----ABOUT-IT----// */
+.about-it {
+  padding: 0;
+  gap: 55px;
+}
+.about-it__wrapper {
+  text-align: left;
+  margin-top: 25px;
+  font-size: 14px;
+}
+.about-it__text {
+  margin: 16px 0;
+  line-height: 20px;
+}
+.about-it__price {
+  margin-left: 10px;
+  font-size: 24px;
 }
 /* //-----SEARCH-FILTER----// */
 .sf-label {
