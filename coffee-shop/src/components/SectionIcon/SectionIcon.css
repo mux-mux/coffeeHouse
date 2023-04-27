@@ -1,0 +1,23 @@
+.section__icon {
+  text-align: center;
+  margin-top: 20px;
+}
+.section__icon::after,
+.section__icon::before {
+  content: '';
+  display: inline-block;
+  margin: 0 20px;
+  width: 60px;
+  height: 1px;
+}
+.section__icon_white::after,
+.section__icon_white::before {
+  background-color: #fff;
+}
+.section__icon_black::after,
+.section__icon_black::before {
+  background-color: #000;
+}
+.icon {
+  vertical-align: text-top;
+}

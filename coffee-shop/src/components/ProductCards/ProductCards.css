@@ -1,0 +1,36 @@
+.products {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 70px;
+}
+.products__item {
+  box-sizing: border-box;
+  color: #000;
+  width: 220px;
+  padding: 22px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.products__best {
+  background: rgba(255, 255, 255, 0.65);
+}
+.products__search {
+  padding-top: 37px;
+  background-color: #fff;
+  filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
+}
+.products__name {
+  margin: 10px 0 15px 0;
+}
+.products__price,
+.products__country {
+  text-align: right;
+}
+.products__price {
+  font-weight: 700;
+}
+.products__country {
+  margin-bottom: 14px;
+}
