@@ -1,8 +1,8 @@
 .promo-main {
-  background: url('../../resources/bgs/Bg_Promo.jpg') center center no-repeat;
+  background: url('../../../public/resources/bgs/Bg_Promo.jpg') center center no-repeat;
 }
 .promo-ourcoffee {
-  background: url('../../resources/bgs/Bg_OurCoffee_1.jpg') center center no-repeat;
+  background: url('../../../public/resources/bgs/Bg_OurCoffee_1.jpg') center center no-repeat;
 }
 .promo {
   color: #fff;

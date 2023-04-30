@@ -3,7 +3,7 @@ import './Buttons.css';
 function Buttons() {
   return (
     <>
-      <a href="our-coffee.html" class="cta">
+      <a href="our-coffee.html" className="cta">
         More
       </a>
     </>

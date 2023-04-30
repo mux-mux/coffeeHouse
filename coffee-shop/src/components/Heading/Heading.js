@@ -7,7 +7,8 @@ function Heading({ text }) {
     about_beans: 'About our beans',
     about_it: 'About it',
   };
-  return <h3 class="section__header">{headings[text]}</h3>;
+  console.log(text);
+  return <h3 className="section__header">{headings[text]}</h3>;
 }
 
 export default Heading;
