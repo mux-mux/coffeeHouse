@@ -1,11 +1,12 @@
+import { Link } from 'react-router-dom';
 import './Buttons.css';
 
 function Buttons() {
   return (
     <>
-      <a href="our-coffee.html" className="cta">
+      <Link to="/ourCoffee" className="cta">
         More
-      </a>
+      </Link>
     </>
   );
 }

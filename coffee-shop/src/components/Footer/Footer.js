@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 function Footer() {
@@ -6,13 +7,13 @@ function Footer() {
       <nav className="nav nav_black">
         <ul>
           <li>
-            <a href="index.html">
+            <Link to="/">
               <img src="resources/icons/Logo_black.png" alt="two beans black" className="logo" />
               Coffee house
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="our-coffee.html">Our coffee</a>
+            <Link to="ourCoffee">Our coffee</Link>
           </li>
         </ul>
       </nav>

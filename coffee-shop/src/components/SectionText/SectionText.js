@@ -8,7 +8,7 @@ function SectionText({ text }) {
         at highly months do things on at. Situation recommend objection do intention so questions.
         As greatly removed calling pleased improve an. Last ask him cold feel met spot shy want.
         Children me laughing we prospect answered followed. At it went is song that held help face.
-        <div className="pBreak"></div>
+        <span className="pBreak"></span>
         Now residence dashwoods she excellent you. Shade being under his bed her, Much read on as
         draw. Blessing for ignorant exercise any yourself unpacked. Pleasant horrible but confined
         day end marriage. Eagerness furniture set preserved far recommend. Did even but nor are most
@@ -18,7 +18,7 @@ function SectionText({ text }) {
     beans: (
       <>
         Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
-        <div className="pBreak"></div>
+        <span className="pBreak"></span>
         Afraid at highly months do things on at. Situation recommend objection do intention
         <br /> so questions. <br /> As greatly removed calling pleased improve an. Last ask him cold
         feel <br /> met spot shy want. Children me laughing we prospect answered followed. At it
@@ -26,9 +26,13 @@ function SectionText({ text }) {
       </>
     ),
   };
+
+  let clazz = 'section__text';
+  clazz += text === 'about' ? ' about_us__text' : ' about-components__text';
+
   return (
     <>
-      <p class="section__text about_us__text">{pText[text]}</p>
+      <p className={clazz}>{pText[text]}</p>
     </>
   );
 }

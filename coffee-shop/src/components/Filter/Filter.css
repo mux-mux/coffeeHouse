@@ -13,6 +13,8 @@
 
   font-size: 12px;
   text-align: center;
+
+  cursor: pointer;
 }
 .filter__label {
   margin-right: 35px;

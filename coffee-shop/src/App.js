@@ -1,40 +1,78 @@
-import Header from './components/Header/Header';
-import Promo from './components/Promo/Promo';
-import SectionIcon from './components/SectionIcon/SectionIcon';
-import Heading from './components/Heading/Heading';
-import SectionText from './components/SectionText/SectionText';
-import OurBest from './components/OurBest/OurBest';
-import Footer from './components/Footer/Footer';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './pages/Layout';
+import OurCoffee from './pages/OurCoffee';
+import Home from './pages/Home';
+import ProductPage from './pages/ProductPage';
+
+const items = [
+  {
+    name: 'Solimo Coffee Beans 2 kg',
+    src: '/resources/items/Item_1.jpg',
+    src_large: '/resources/product_page/Product_Preview.jpg',
+    country: 'Brazil',
+    descr:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    price: 10.73,
+  },
+  {
+    name: 'Presto Coffee Beans 1 kg',
+    src: '/resources/items/Item_2.jpg',
+    src_large: '/resources/product_page/Product_Preview.jpg',
+    country: 'Kenya',
+    descr:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    price: 15.99,
+  },
+  {
+    name: 'AROMISTICO Coffee 1 kg',
+    src: '/resources/items/Item_3.jpg',
+    src_large: '/resources/product_page/Product_Preview.jpg',
+    country: 'Columbia',
+    descr:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    price: 6.99,
+  },
+  {
+    name: 'AROMISTICO Coffee 1 kg',
+    src: '/resources/items/Item_3.jpg',
+    src_large: '/resources/product_page/Product_Preview.jpg',
+    country: 'Brazil',
+    descr:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    price: 6.99,
+  },
+  {
+    name: 'AROMISTICO Coffee 1 kg',
+    src: '/resources/items/Item_3.jpg',
+    src_large: '/resources/product_page/Product_Preview.jpg',
+    country: 'Brazil',
+    descr:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    price: 6.99,
+  },
+  {
+    name: 'AROMISTICO Coffee 1 kg',
+    src: '/resources/items/Item_3.jpg',
+    src_large: '/resources/product_page/Product_Preview.jpg',
+    country: 'Brazil',
+    descr:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    price: 6.99,
+  },
+];
 
 function App() {
-  const container = 'container';
+  const threeBest = items.slice(0, 3);
   return (
-    <>
-      <section className="promo promo-main">
-        <Header />
-        <div className={container}>
-          <Promo />
-        </div>
-      </section>
-
-      <section className="section about_us">
-        <div className={container}>
-          <Heading text="about" />
-          <SectionIcon />
-          <SectionText text="about" />
-        </div>
-      </section>
-
-      <section className="section our-best">
-        <div className="container">
-          <Heading text="best" />
-          <OurBest />
-        </div>
-      </section>
-
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home threeBest={threeBest} />} />
+          <Route path="ourCoffee" element={<OurCoffee items={items} />} />
+          <Route path="productPage" element={<ProductPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

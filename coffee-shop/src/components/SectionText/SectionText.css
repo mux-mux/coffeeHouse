@@ -1,7 +1,7 @@
 .about-components {
   display: flex;
   padding: 0 50px;
-  margin: 70px auto 30px;
+  /* margin: 70px auto 30px; */
   gap: 80px;
   text-align: center;
 }
@@ -40,5 +40,6 @@
   margin: 0 auto;
 }
 .pBreak {
+  display: block;
   margin-top: 25px;
 }
