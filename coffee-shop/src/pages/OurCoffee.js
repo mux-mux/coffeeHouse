@@ -11,21 +11,40 @@ import ProductCards from '../components/ProductCards/ProductCards';
 class OurCoffee extends Component {
   constructor(props) {
     super(props);
-    this.state = { ...props, filter: 'Brazil' };
+    this.state = { ...props, filter: 'All', term: '' };
   }
 
-  filterItems = (country) => {
-    this.setState(({ items }) => {
-      return {
-        filter: items.filter((item) => item.country === country),
-        // filter: country,
-      };
+  setSearch = (query) => {
+    this.setState({
+      term: query,
     });
   };
 
+  setFilter = (country) => {
+    this.setState({
+      filter: country,
+    });
+  };
+
+  showSearch = (items, query) => {
+    if (query.length === 0) {
+      return items;
+    } else {
+      return items.filter((item) => item.name.indexOf(query) > -1);
+    }
+  };
+
+  showFilter = (items, filter) => {
+    if (filter === 'All') {
+      return items;
+    } else {
+      return items.filter((item) => item.country === filter);
+    }
+  };
+
   render() {
-    const { items } = this.state;
-    console.log(this.state);
+    const { items, filter, term } = this.state;
+    const visibleData = this.showFilter(this.showSearch(items, term), filter);
     return (
       <>
         <section className="promo promo-ourcoffee">
@@ -58,14 +77,14 @@ class OurCoffee extends Component {
 
         <div className="container">
           <div className="search-filter__wrapper">
-            <Search />
-            <Filter filter={this.filterItems} />
+            <Search query={this.setSearch} />
+            <Filter filter={this.setFilter} name={filter} />
           </div>
         </div>
 
         <section className="section products-page">
           <div className="container">
-            <ProductCards items={items} />
+            <ProductCards items={visibleData} />
           </div>
         </section>
       </>
