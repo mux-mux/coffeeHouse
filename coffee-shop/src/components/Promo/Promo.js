@@ -1,8 +1,8 @@
 import Buttons from '../Buttons/Buttons';
 import Header from '../Header/Header';
 
-import './Promo.css';
-import '../SectionIcon/SectionIcon.css';
+import './Promo.scss';
+import '../SectionIcon/SectionIcon.scss';
 
 function Promo() {
   return (

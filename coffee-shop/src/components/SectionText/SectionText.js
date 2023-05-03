@@ -1,4 +1,4 @@
-import './SectionText.css';
+import './SectionText.scss';
 
 function SectionText({ text }) {
   const pText = {

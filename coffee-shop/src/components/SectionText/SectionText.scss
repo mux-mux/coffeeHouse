@@ -1,29 +1,28 @@
 .about-components {
   display: flex;
   padding: 0 50px;
-  /* margin: 70px auto 30px; */
   gap: 80px;
   text-align: center;
-}
-.about-components__text {
-  margin-top: 25px;
+  &__text {
+    margin-top: 25px;
+  }
 }
 .about-it {
   padding: 0;
   gap: 55px;
-}
-.about-it__wrapper {
-  text-align: left;
-  margin-top: 25px;
-  font-size: 14px;
-}
-.about-it__text {
-  margin: 16px 0;
-  line-height: 20px;
-}
-.about-it__price {
-  margin-left: 10px;
-  font-size: 24px;
+  &__wrapper {
+    text-align: left;
+    margin-top: 25px;
+    font-size: 14px;
+  }
+  &__text {
+    margin: 16px 0;
+    line-height: 20px;
+  }
+  &__price {
+    margin-left: 10px;
+    font-size: 24px;
+  }
 }
 .section__text {
   font-size: 14px;
@@ -43,3 +42,5 @@
   display: block;
   margin-top: 25px;
 }
+
+@import './responsive.scss';

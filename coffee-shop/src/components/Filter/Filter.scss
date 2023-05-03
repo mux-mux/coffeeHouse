@@ -1,0 +1,28 @@
+.filter {
+  &__options {
+    display: inline-flex;
+    gap: 5px;
+  }
+  &__option {
+    width: 75px;
+    height: 30px;
+    border: none;
+
+    background: #ffffff;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 4px 0px 0px 4px;
+
+    font-size: 12px;
+    text-align: center;
+
+    cursor: pointer;
+  }
+  &__label {
+    margin-right: 30px;
+  }
+  &_active {
+    background: #eaddca;
+  }
+}
+
+@import './responsive.scss';

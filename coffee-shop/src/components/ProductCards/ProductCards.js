@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import './ProductCards.css';
+import './ProductCards.scss';
 
 function ProductCards({ items }) {
   const elements = items.map((item, index) => {

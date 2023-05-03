@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import './OurBest.css';
-import '../ProductCards/ProductCards.css';
+import './OurBest.scss';
+import '../ProductCards/ProductCards.scss';
 
 function OurBest({ threeBest }) {
   const elements = threeBest.map((item, index) => {

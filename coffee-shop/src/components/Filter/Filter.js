@@ -1,4 +1,4 @@
-import './Filter.css';
+import './Filter.scss';
 
 function Filter({ filter, name }) {
   const countries = ['All', 'Brazil', 'Kenya', 'Columbia'];

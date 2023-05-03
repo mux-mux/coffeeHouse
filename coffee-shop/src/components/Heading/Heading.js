@@ -1,4 +1,4 @@
-import './Heading.css';
+import './Heading.scss';
 
 function Heading({ text }) {
   const headings = {

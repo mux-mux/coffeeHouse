@@ -1,4 +1,4 @@
-import './SectionIcon.css';
+import './SectionIcon.scss';
 
 function SectionIcon() {
   return (

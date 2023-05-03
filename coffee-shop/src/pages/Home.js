@@ -6,8 +6,7 @@ import SectionIcon from '../components/SectionIcon/SectionIcon';
 import Heading from '../components/Heading/Heading';
 import SectionText from '../components/SectionText/SectionText';
 import OurBest from '../components/OurBest/OurBest';
-// import Footer from '../components/Footer/Footer';
-import '../App.css';
+import '../App.scss';
 
 function Home({ threeBest }) {
   const container = 'container';

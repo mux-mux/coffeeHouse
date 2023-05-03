@@ -1,4 +1,4 @@
-import './Search.css';
+import './Search.scss';
 
 function Search({ query }) {
   return (
@@ -7,7 +7,7 @@ function Search({ query }) {
       <input
         type="text"
         className="search__input"
-        placeholder="start typing here..."
+        placeholder="find your coffee..."
         onChange={(e) => query(e.currentTarget.value)}
       />
     </section>

@@ -1,0 +1,23 @@
+.promo {
+  color: #fff;
+  font-weight: 700;
+  &-main {
+    background: url('../../../public/resources/bgs/Bg_Promo.jpg') center center no-repeat;
+  }
+  &-ourcoffee {
+    background: url('../../../public/resources/bgs/Bg_OurCoffee_1.jpg') center center no-repeat;
+  }
+  &__content {
+    text-align: center;
+    padding-top: 10%;
+  }
+  &__header {
+    font-size: 40px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  &__text {
+    font-size: 24px;
+    line-height: 35px;
+    margin: 30px 0 25px 0;
+  }
+}

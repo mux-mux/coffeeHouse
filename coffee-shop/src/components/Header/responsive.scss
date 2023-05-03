@@ -1,0 +1,10 @@
+@import '../../variables.scss';
+
+@media only screen and (max-width: $sm) {
+  .header {
+    padding: 15px 0 0;
+  }
+  .nav ul {
+    justify-content: center;
+  }
+}
