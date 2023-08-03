@@ -30,7 +30,7 @@ class OurCoffee extends Component {
     if (query.length === 0) {
       return items;
     } else {
-      return items.filter((item) => item.name.indexOf(query) > -1);
+      return items.filter((item) => item.name.toLowerCase().indexOf(query.toLowerCase()) > -1);
     }
   };
 
@@ -60,7 +60,7 @@ class OurCoffee extends Component {
             <div className="about-components">
               <div className="about-components__img-wrapper">
                 <img
-                  src="/resources/sections/Section_About-beans.jpg"
+                  src="./resources/sections/Section_About-beans.jpg"
                   alt="woman with cup"
                   className=""
                 />

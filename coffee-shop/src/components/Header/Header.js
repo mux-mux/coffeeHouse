@@ -8,7 +8,7 @@ function Header() {
         <ul>
           <li>
             <Link to="/">
-              <img src="/resources/icons/Logo_white.png" alt="two beans white" className="logo" />
+              <img src="./resources/icons/Logo_white.png" alt="two beans white" className="logo" />
               Coffee house
             </Link>
           </li>

@@ -8,7 +8,7 @@ function Footer() {
         <ul>
           <li>
             <Link to="/">
-              <img src="resources/icons/Logo_black.png" alt="two beans black" className="logo" />
+              <img src="./resources/icons/Logo_black.png" alt="two beans black" className="logo" />
               Coffee house
             </Link>
           </li>
@@ -20,7 +20,7 @@ function Footer() {
       <br />
       <div className="section__icon section__icon_black">
         <img
-          src="resources/icons/Section-footer_black.png"
+          src="./resources/icons/Section-footer_black.png"
           alt="three beans white"
           className="icon"
         />

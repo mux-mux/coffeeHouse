@@ -6,7 +6,7 @@ import SectionIcon from '../components/SectionIcon/SectionIcon';
 function ProductPage() {
   const location = useLocation();
   const { from } = location.state;
-  const { price, country, descr } = from;
+  const { name, price, src_large, country, descr } = from;
   return (
     <>
       <section className="promo promo-ourcoffee">
@@ -20,11 +20,7 @@ function ProductPage() {
       <div className="container product-page-container">
         <section className="section about-components about-it">
           <div className="about-components__img-wrapper">
-            <img
-              src="/resources/product_page/Product_Preview.jpg"
-              alt="aromistico coffee"
-              className="about-it__img"
-            />
+            <img src={src_large} alt={name} className="about-it__img" />
           </div>
           <div className="about-it__content">
             <Heading text="about_it" />
