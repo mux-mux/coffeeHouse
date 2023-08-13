@@ -6,6 +6,8 @@ function SectionIcon() {
       <img
         src="./resources/icons/Section-footer_black.png"
         alt="three beans black"
+        width="30"
+        height="30"
         className="icon"
       />
     </div>
