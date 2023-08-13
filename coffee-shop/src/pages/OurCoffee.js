@@ -1,4 +1,6 @@
-import { Component } from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { getItems } from './../services/ItemsService';
 
 import Header from '../components/Header/Header';
 import SectionText from '../components/SectionText/SectionText';
@@ -8,88 +10,81 @@ import Search from '../components/Search/Search';
 import Filter from '../components/Filter/Filter';
 import ProductCards from '../components/ProductCards/ProductCards';
 
-class OurCoffee extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { ...props, filter: 'All', term: '' };
-  }
+const OurCoffee = ({ products }) => {
+  const [filter, setFilter] = useState('All');
+  const [search, setSearch] = useState('');
+  const [items, setItems] = useState('');
 
-  setSearch = (query) => {
-    this.setState({
-      term: query,
-    });
+  useEffect(() => {
+    getItems('https://api.jsonbin.io/v3/b/64d8d9699d312622a3908cc8').then((data) => setItems(data));
+  }, []);
+
+  const searchQuery = (query) => {
+    setSearch(query);
   };
 
-  setFilter = (country) => {
-    this.setState({
-      filter: country,
-    });
+  const filterCountry = (country) => {
+    setFilter(country);
   };
 
-  showSearch = (items, query) => {
+  const showSearch = (data, query) => {
     if (query.length === 0) {
-      return items;
+      return data;
     } else {
-      return items.filter((item) => item.name.toLowerCase().indexOf(query.toLowerCase()) > -1);
+      return data.filter((item) => item.name.toLowerCase().indexOf(query.toLowerCase()) > -1);
     }
   };
 
-  showFilter = (items, filter) => {
+  const showFilter = (data, filter) => {
     if (filter === 'All') {
-      return items;
+      return data;
     } else {
-      return items.filter((item) => item.country === filter);
+      return data.filter((item) => item.country === filter);
     }
   };
 
-  render() {
-    const { items, filter, term } = this.state;
-    const visibleData = this.showFilter(this.showSearch(items, term), filter);
-    return (
-      <>
-        <section className="promo promo-ourcoffee">
-          <Header />
-          <div className="container">
-            <div className="section promo__content">
-              <h1 className="promo__header">Our Coffee</h1>
-            </div>
-          </div>
-        </section>
-        <section className="section">
-          <div className="container">
-            <div className="about-components">
-              <div className="about-components__img-wrapper">
-                <img
-                  src="./resources/sections/Section_About-beans.jpg"
-                  alt="woman with cup"
-                  className=""
-                />
-              </div>
-              <div className="about-components__content">
-                <Heading text="beans" />
-                <SectionIcon />
-                <SectionText text="beans" />
-              </div>
-            </div>
-          </div>
-        </section>
-        <div className="section__divider"></div>
-
+  const visibleData = showFilter(showSearch([...products] || items, search), filter);
+  return (
+    <>
+      <section className="promo promo-ourcoffee">
+        <Header />
         <div className="container">
-          <div className="search-filter__wrapper">
-            <Search query={this.setSearch} />
-            <Filter filter={this.setFilter} name={filter} />
+          <div className="section promo__content">
+            <h1 className="promo__header">Our Coffee</h1>
           </div>
         </div>
-
-        <section className="section products-page">
-          <div className="container">
-            <ProductCards items={visibleData} />
+      </section>
+      <section className="section">
+        <div className="container">
+          <div className="about-components">
+            <picture className="about-components__img-wrapper">
+              <source srcSet="./resources/sections/webp/Section_About-beans.webp" />
+              <img src="./resources/sections/Section_About-beans.jpg" alt="woman with cup" />
+            </picture>
+            <div className="about-components__content">
+              <Heading text="beans" />
+              <SectionIcon />
+              <SectionText text="beans" />
+            </div>
           </div>
-        </section>
-      </>
-    );
-  }
-}
+        </div>
+      </section>
+      <div className="section__divider"></div>
+
+      <div className="container">
+        <div className="search-filter__wrapper">
+          <Search query={searchQuery} />
+          <Filter filter={filterCountry} name={filter} />
+        </div>
+      </div>
+
+      <section className="section products-page">
+        <div className="container">
+          <ProductCards items={visibleData} />
+        </div>
+      </section>
+    </>
+  );
+};
 
 export default OurCoffee;

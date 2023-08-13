@@ -3,7 +3,7 @@ import './ProductCards.scss';
 
 function ProductCards({ items }) {
   const elements = items.map((item, index) => {
-    const { name, src, country, price } = item;
+    const { name, src, webp, country, price } = item;
     return (
       <Link
         to="/productPage"
@@ -11,7 +11,10 @@ function ProductCards({ items }) {
         key={index}
         state={{ from: item }}
       >
-        <img src={src} alt="two packs of solimo beans" className="products__img" />
+        <picture className="products__img">
+          <source srcSet={webp} type="image/webp" />
+          <img src={src} alt="two packs of beans" />
+        </picture>
         <div className="products__name">{name}</div>
         <div className="products__country">{country}</div>
         <div className="products__price">{price + '$'}</div>

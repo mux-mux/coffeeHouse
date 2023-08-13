@@ -1,12 +1,16 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Header from '../components/Header/Header';
 import Heading from '../components/Heading/Heading';
 import SectionIcon from '../components/SectionIcon/SectionIcon';
 
 function ProductPage() {
   const location = useLocation();
+  const navigate = useNavigate();
+  const goBack = () => {
+    navigate(-1);
+  };
   const { from } = location.state;
-  const { name, price, src_large, country, descr } = from;
+  const { name, price, src_large, webp_large, country, descr } = from;
   return (
     <>
       <section className="promo promo-ourcoffee">
@@ -18,10 +22,14 @@ function ProductPage() {
         </div>
       </section>
       <div className="container product-page-container">
+        <button className="back_btn" onClick={goBack}>
+          Back
+        </button>
         <section className="section about-components about-it">
-          <div className="about-components__img-wrapper">
-            <img src={src_large} alt={name} className="about-it__img" />
-          </div>
+          <picture className="about-components__img-wrapper">
+            <source srcSet={webp_large} type="image/webp" />
+            <img src={src_large} alt={name} />
+          </picture>
           <div className="about-it__content">
             <Heading text="about_it" />
             <SectionIcon />
