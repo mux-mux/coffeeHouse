@@ -41,10 +41,10 @@
 
 ```bash
 # Clone this repository
-$ git clone git@github.com:mux-mux/portfolio.git
+$ git clone git@github.com:mux-mux/coffeeHouse.git
 
 # Go into the repository
-$ cd portfolio
+$ cd coffeeHouse/coffee-shop
 
 # Install dependencies
 $ npm install
