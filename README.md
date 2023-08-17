@@ -25,15 +25,16 @@
 9. product_cards
 10. filter
 11. search
-12. routing
-13. product_page
-14. json_service
-15. hooks (location, state, effect, navigation)
+12. responsive
+13. routing
+14. product_page
+15. json_service
+16. hooks (location, state, effect, navigate)
 
 ## Folder structure :open_file_folder:
 
 <div align="center">
-  <img src="https://jsgo.pro/media/structure/coffeehouse_folder_structure.jpg" alt="Portfolio Folder structure" width="100%" />
+  <img src="https://jsgo.pro/media/structure/coffeehouse_folder_structure.jpg" alt="CoffeeHouse Folder structure" width="100%" />
   <br>
 </div>
 
