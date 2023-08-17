@@ -1,6 +1,6 @@
 # CoffeeHouse :coffee:
 
-## Simple React Coffee shop App :two::heavy_plus_sign::two:
+## Amazing React Coffee shop App :star::star::star::star::star:
 
 ## [Live Link](https://jsgo.pro/coffeehouse) :link:
 
