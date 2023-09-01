@@ -34,7 +34,7 @@
 ## Folder structure :open_file_folder:
 
 <div align="center">
-  <img src="https://jsgo.pro/media/structure/coffeehouse_folder_structure.jpg" alt="CoffeeHouse Folder structure" width="100%" />
+  <img src="https://jsgo.pro/media/structure/coffeehouse_project_structure.png" alt="CoffeeHouse Folder structure" width="100%" />
   <br>
 </div>
 
@@ -45,7 +45,7 @@
 $ git clone git@github.com:mux-mux/coffeeHouse.git
 
 # Go into the repository
-$ cd coffeeHouse/coffee-shop
+$ cd coffeeHouse
 
 # Install dependencies
 $ npm install
