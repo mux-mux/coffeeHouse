@@ -4,25 +4,32 @@ function SectionText({ text }) {
   const pText = {
     about: (
       <>
-        Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible. Afraid
-        at highly months do things on at. Situation recommend objection do intention so questions.
-        As greatly removed calling pleased improve an. Last ask him cold feel met spot shy want.
-        Children me laughing we prospect answered followed. At it went is song that held help face.
+        Welcome to our coffee webstore, your ultimate destination for premium
+        coffee beans that elevate your daily brew. We specialize in delivering
+        the finest coffee selections to satisfy every coffee lover's palate.
+        From the rich and full-bodied <strong>Solimo Coffee Beans (1kg)</strong>{' '}
+        to the bold and aromatic <strong>Presto Coffee Beans (1kg)</strong>, we
+        cater to those who crave quality in every cup. Our offerings are
+        carefully curated to ensure freshness, flavor, and satisfaction, making
+        your coffee experience truly exceptional.
         <span className="pBreak"></span>
-        Now residence dashwoods she excellent you. Shade being under his bed her, Much read on as
-        draw. Blessing for ignorant exercise any yourself unpacked. Pleasant horrible but confined
-        day end marriage. Eagerness furniture set preserved far recommend. Did even but nor are most
-        gave hope. Secure active living depend son repair day ladies now.
+        At our store, we also feature the exquisite{' '}
+        <strong>AROMISTICO Coffee Beans (1kg)</strong>, crafted to transport you
+        to the heart of Italian coffee culture. With every bag, we promise not
+        just coffee but an invitation to savor the artistry and tradition of
+        exceptional roasting. Whether you’re stocking up for your home brewing
+        station or searching for the perfect gift for a coffee enthusiast, we’ve
+        got you covered. Discover the joy of brewing premium coffee with us and
+        make every sip a moment of delight!
       </>
     ),
     beans: (
       <>
-        Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
+        Our carefully curated selection of coffee beans offers something for
+        every taste and brewing style.
         <span className="pBreak"></span>
-        Afraid at highly months do things on at. Situation recommend objection do intention
-        <br /> so questions. <br /> As greatly removed calling pleased improve an. Last ask him cold
-        feel <br /> met spot shy want. Children me laughing we prospect answered followed. At it
-        went <br /> is song that held help face.'
+        Each bag is freshly packed to ensure exceptional quality and flavor in
+        every brew.
       </>
     ),
   };
