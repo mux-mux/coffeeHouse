@@ -4,14 +4,15 @@ function SectionText({ text }) {
   const pText = {
     about: (
       <>
-        Welcome to our coffee webstore, your ultimate destination for premium
-        coffee beans that elevate your daily brew. We specialize in delivering
-        the finest coffee selections to satisfy every coffee lover's palate.
-        From the rich and full-bodied <strong>Solimo Coffee Beans (1kg)</strong>{' '}
-        to the bold and aromatic <strong>Presto Coffee Beans (1kg)</strong>, we
-        cater to those who crave quality in every cup. Our offerings are
-        carefully curated to ensure freshness, flavor, and satisfaction, making
-        your coffee experience truly exceptional.
+        Welcome to our coffee beans webstore, your ultimate destination for
+        premium coffee beans that elevate your daily brew. We specialize in
+        delivering the finest coffee selections to satisfy every coffee lover's
+        palate. From the rich and full-bodied{' '}
+        <strong>Solimo Coffee Beans (1kg)</strong> to the bold and aromatic{' '}
+        <strong>Presto Coffee Beans (1kg)</strong>, we cater to those who crave
+        quality in every cup. Our offerings are carefully curated to ensure
+        freshness, flavor, and satisfaction, making your coffee experience truly
+        exceptional.
         <span className="pBreak"></span>
         At our store, we also feature the exquisite{' '}
         <strong>AROMISTICO Coffee Beans (1kg)</strong>, crafted to transport you

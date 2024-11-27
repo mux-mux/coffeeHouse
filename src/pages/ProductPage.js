@@ -2,6 +2,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import Header from '../components/Header/Header';
 import Heading from '../components/Heading/Heading';
 import SectionIcon from '../components/SectionIcon/SectionIcon';
+import Buttons from '../components/Buttons/Buttons';
 
 function ProductPage() {
   const location = useLocation();
@@ -42,9 +43,10 @@ function ProductPage() {
                 <strong>Description: </strong>
                 {descr}
               </p>
-              <div>
+              <div className="about-it__price">
                 <strong>Price: </strong>
-                <span className="about-it__price">{price + '$'}</span>
+                <span className="about-it__price-value">{price + '$'}</span>
+                <Buttons forType="buy" />
               </div>
             </div>
           </div>

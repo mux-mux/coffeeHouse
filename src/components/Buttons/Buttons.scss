@@ -10,9 +10,23 @@
   border: 1px solid #333;
   border-radius: 3px;
   transition: all 0.5s;
+
   &:hover {
     background-color: #ccc;
     border: 1px solid #999;
     box-shadow: inset 0px 0px 24px 0px rgba(184, 184, 184, 1);
+  }
+}
+
+.button-buy {
+  padding: 12px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #444;
   }
 }

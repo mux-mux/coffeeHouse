@@ -20,8 +20,13 @@
     line-height: 20px;
   }
   &__price {
-    margin-left: 10px;
-    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    &-value {
+      font-size: 24px;
+    }
   }
 }
 .section__text {
