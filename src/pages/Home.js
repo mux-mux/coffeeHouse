@@ -1,6 +1,5 @@
 import React from 'react';
 
-// import Header from '../components/Header/Header';
 import Promo from '../components/Promo/Promo';
 import SectionIcon from '../components/SectionIcon/SectionIcon';
 import Heading from '../components/Heading/Heading';
@@ -28,8 +27,6 @@ function Home({ threeBest }) {
           <OurBest threeBest={threeBest} />
         </div>
       </section>
-
-      {/* <Footer /> */}
     </>
   );
 }
