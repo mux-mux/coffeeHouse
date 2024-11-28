@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import './OurBest.scss';
-import '../ProductCards/ProductCards.scss';
 
 function OurBest({ threeBest }) {
   const elements = threeBest.map((item, index) => {
