@@ -1,15 +1,23 @@
 .no-webp .promo-main {
-  background: url('../../../public/resources/bgs/Bg_Promo.jpg') center center no-repeat;
+  background: url('../../../public/resources/bgs/Bg_Promo.jpg') center center
+    no-repeat;
+  background-size: cover;
 }
 .no-webp .promo-ourcoffee {
-  background: url('../../../public/resources/bgs/Bg_OurCoffee_1.jpg') center center no-repeat;
+  background: url('../../../public/resources/bgs/Bg_OurCoffee_1.jpg') center
+    center no-repeat;
+  background-size: cover;
 }
 
 .webp .promo-main {
-  background: url('../../../public/resources/bgs/webp/Bg_Promo.webp') center center no-repeat;
+  background: url('../../../public/resources/bgs/webp/Bg_Promo.webp') center
+    center no-repeat;
+  background-size: cover;
 }
 .webp .promo-ourcoffee {
-  background: url('../../../public/resources/bgs/webp/Bg_OurCoffee_1.webp') center center no-repeat;
+  background: url('../../../public/resources/bgs/webp/Bg_OurCoffee_1.webp')
+    center center no-repeat;
+  background-size: cover;
 }
 
 .promo {
