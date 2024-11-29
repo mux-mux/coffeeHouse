@@ -15,7 +15,9 @@ const OurCoffee = ({ products }) => {
   const [items, setItems] = useState('');
 
   useEffect(() => {
-    getItems('https://api.jsonbin.io/v3/b/64d8d9699d312622a3908cc8').then((data) => setItems(data));
+    getItems('https://api.jsonbin.io/v3/b/64d8d9699d312622a3908cc8').then(
+      (data) => setItems(data)
+    );
   }, []);
 
   const searchQuery = (query) => {
@@ -30,7 +32,9 @@ const OurCoffee = ({ products }) => {
     if (query.length === 0) {
       return data;
     } else {
-      return data.filter((item) => item.name.toLowerCase().indexOf(query.toLowerCase()) > -1);
+      return data.filter(
+        (item) => item.name.toLowerCase().indexOf(query.toLowerCase()) > -1
+      );
     }
   };
 
@@ -42,7 +46,10 @@ const OurCoffee = ({ products }) => {
     }
   };
 
-  const visibleData = showFilter(showSearch([...products] || items, search), filter);
+  const visibleData = showFilter(
+    showSearch([...products] || items, search),
+    filter
+  );
   return (
     <>
       <section className="promo promo-ourcoffee">
@@ -57,8 +64,14 @@ const OurCoffee = ({ products }) => {
         <div className="container">
           <div className="about-components">
             <picture className="about-components__img-wrapper">
-              <source srcSet="./resources/sections/webp/Section_About-beans.webp" />
-              <img src="./resources/sections/Section_About-beans.jpg" alt="woman with cup" />
+              <source
+                type="image/webp"
+                srcSet="./resources/sections/webp/Section_About-beans.webp"
+              />
+              <img
+                src="./resources/sections/Section_About-beans.jpg"
+                alt="woman with cup"
+              />
             </picture>
             <div className="about-components__content">
               <Heading text="beans" />

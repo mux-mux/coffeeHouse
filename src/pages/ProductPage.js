@@ -28,7 +28,7 @@ function ProductPage() {
         </button>
         <section className="section about-components about-it">
           <picture className="about-components__img-wrapper">
-            <source srcSet={webp_large} type="image/webp" />
+            <source type="image/webp" srcSet={webp_large} />
             <img src={src_large} alt={name} />
           </picture>
           <div className="about-it__content">

@@ -1,6 +1,9 @@
-.no-webp .our-best {
-  background: url('../../../public/resources/bgs/Bg_Best.jpg') top center repeat-y;
-}
-.webp .our-best {
-  background: url('../../../public/resources/bgs/webp/Bg_Best.webp') top center repeat-y;
+.our-best {
+  background-position: top center;
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-image: image-set(
+    '../../../public/resources/bgs/webp/Bg_Best.webp' type('image/webp'),
+    '../../../public/resources/bgs/Bg_Best.jpg' type('image/jpeg')
+  );
 }

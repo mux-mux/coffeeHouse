@@ -1,23 +1,20 @@
-.no-webp .promo-main {
-  background: url('../../../public/resources/bgs/Bg_Promo.jpg') center center
-    no-repeat;
+.promo-main {
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-image: image-set(
+    '../../../public/resources/bgs/webp/Bg_Promo.webp' type('image/webp'),
+    '../../../public/resources/bgs/Bg_Promo.jpg' type('image/jpeg')
+  );
 }
-.no-webp .promo-ourcoffee {
-  background: url('../../../public/resources/bgs/Bg_OurCoffee_1.jpg') center
-    center no-repeat;
+.promo-ourcoffee {
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
-}
-
-.webp .promo-main {
-  background: url('../../../public/resources/bgs/webp/Bg_Promo.webp') center
-    center no-repeat;
-  background-size: cover;
-}
-.webp .promo-ourcoffee {
-  background: url('../../../public/resources/bgs/webp/Bg_OurCoffee_1.webp')
-    center center no-repeat;
-  background-size: cover;
+  background-image: image-set(
+    '../../../public/resources/bgs/webp/Bg_OurCoffee_1.webp' type('image/webp'),
+    '../../../public/resources/bgs/Bg_OurCoffee_1.jpg' type('image/jpeg')
+  );
 }
 
 .promo {

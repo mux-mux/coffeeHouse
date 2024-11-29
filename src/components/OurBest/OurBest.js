@@ -12,7 +12,7 @@ function OurBest({ threeBest }) {
         state={{ from: item }}
       >
         <picture className="products__img">
-          <source srcSet={webp} type="image/webp" />
+          <source type="image/webp" srcSet={webp} />
           <img src={src} alt="two packs of beans" />
         </picture>
         <div className="products__name">{name}</div>
