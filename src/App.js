@@ -11,7 +11,9 @@ function App() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    getItems('https://api.jsonbin.io/v3/b/64d8d9699d312622a3908cc8').then((data) => setItems(data));
+    getItems('https://api.jsonbin.io/v3/b/64d8d9699d312622a3908cc8').then(
+      (data) => setItems(data)
+    );
   }, []);
 
   const threeBest = items.slice(0, 3);

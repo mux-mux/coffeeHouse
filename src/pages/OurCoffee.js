@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import { getItems } from './../services/ItemsService';
+import { useState } from 'react';
 
 import Header from '../components/Header/Header';
 import SectionText from '../components/SectionText/SectionText';
@@ -12,21 +11,9 @@ import ProductCards from '../components/ProductCards/ProductCards';
 const OurCoffee = ({ products }) => {
   const [filter, setFilter] = useState('All');
   const [search, setSearch] = useState('');
-  const [items, setItems] = useState('');
 
-  useEffect(() => {
-    getItems('https://api.jsonbin.io/v3/b/64d8d9699d312622a3908cc8').then(
-      (data) => setItems(data)
-    );
-  }, []);
-
-  const searchQuery = (query) => {
-    setSearch(query);
-  };
-
-  const filterCountry = (country) => {
-    setFilter(country);
-  };
+  const searchQuery = (query) => setSearch(query);
+  const filterCountry = (country) => setFilter(country);
 
   const showSearch = (data, query) => {
     if (query.length === 0) {
@@ -46,10 +33,7 @@ const OurCoffee = ({ products }) => {
     }
   };
 
-  const visibleData = showFilter(
-    showSearch([...products] || items, search),
-    filter
-  );
+  const visibleData = showFilter(showSearch([...products], search), filter);
   return (
     <>
       <section className="promo promo-ourcoffee">
