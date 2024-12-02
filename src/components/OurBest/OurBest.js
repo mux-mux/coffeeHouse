@@ -4,6 +4,14 @@ import './OurBest.scss';
 function OurBest({ threeBest }) {
   const elements = threeBest.map((item, index) => {
     const { name, src, webp, price } = item;
+
+    const preloadPageAssets = (imageSrcs) => {
+      imageSrcs.forEach((imageSrc) => {
+        const img = new Image();
+        img.src = imageSrc;
+      });
+    };
+
     return (
       <Link
         to="/productPage"

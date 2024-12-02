@@ -26,7 +26,7 @@ function ProductPage() {
         <button className="back_btn" onClick={goBack}>
           Back
         </button>
-        <section className="section about-components about-it">
+        <section className="section about-components">
           <picture className="about-components__img-wrapper">
             <source type="image/webp" srcSet={webp_large} />
             <img src={src_large} alt={name} />

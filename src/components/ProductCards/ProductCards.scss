@@ -33,4 +33,13 @@
   &__country {
     margin-bottom: 14px;
   }
+  &__our-best {
+    background-position: top center;
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-image: image-set(
+      '../../../public/resources/bgs/webp/Bg_Best.webp' type('image/webp'),
+      '../../../public/resources/bgs/Bg_Best.jpg' type('image/jpeg')
+    );
+  }
 }

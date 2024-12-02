@@ -1,7 +1,8 @@
 .about-components {
-  display: flex;
-  padding: 0 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 80px;
+  padding: 0 50px;
   text-align: center;
   &__text {
     margin-top: 25px;
