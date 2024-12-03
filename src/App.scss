@@ -1,9 +1,20 @@
 @import './variables.scss';
 
+@font-face {
+  font-family: 'Merienda';
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: fallback;
+  src: url('../public/resources/fonts/Merienda_variable.woff2') format('woff2');
+}
+
+* {
+  font-family: 'Merienda', serif;
+  font-weight: 400;
+}
+
 body {
   max-width: 1440px;
-  font-family: 'Merienda', cursive;
-  font-style: normal;
   margin: 0 auto;
 }
 ul {
