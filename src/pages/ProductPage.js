@@ -23,7 +23,10 @@ function ProductPage() {
         </div>
       </section>
       <div className="container product-page-container">
-        <button className="back_btn" onClick={goBack}>
+        <button
+          className="button button-outline button-outline-back button-sm"
+          onClick={goBack}
+        >
           Back
         </button>
         <section className="section about-components">

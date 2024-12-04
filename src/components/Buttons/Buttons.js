@@ -3,11 +3,14 @@ import './Buttons.scss';
 
 const BUTTONS = {
   more: (
-    <Link to="/ourCoffee" className="cta">
+    <Link
+      to="/ourCoffee"
+      className="button button-outline button-outline-more button-lg"
+    >
       More
     </Link>
   ),
-  buy: <button className="button-buy">Buy</button>,
+  buy: <button className="button button-fill button-lg">Buy</button>,
 };
 
 function Buttons({ forType = 'buy' }) {
