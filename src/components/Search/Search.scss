@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .search {
   &-filter__label {
     font-size: 14px;
@@ -28,4 +30,14 @@
   }
 }
 
-@import './responsive.scss';
+@media only screen and (max-width: $md) {
+  .search-filter__wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+@media only screen and (max-width: $xsm) {
+  .search span {
+    display: none;
+  }
+}

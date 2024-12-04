@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .logo {
   transform: translateX(5px);
 }
@@ -22,4 +24,8 @@
   }
 }
 
-@import './responsive.scss';
+@media only screen and (max-width: $sm) {
+  .nav ul {
+    justify-content: center;
+  }
+}

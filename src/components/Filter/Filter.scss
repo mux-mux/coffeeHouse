@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .filter {
   &__options {
     display: inline-flex;
@@ -25,4 +27,8 @@
   }
 }
 
-@import './responsive.scss';
+@media only screen and (max-width: $xsm) {
+  .filter span {
+    display: none;
+  }
+}
