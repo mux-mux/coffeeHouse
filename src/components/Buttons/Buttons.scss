@@ -7,13 +7,19 @@
 
     &:hover {
       cursor: pointer;
-      filter: invert(1);
+      background-color: #555;
+    }
+
+    &:active {
+      box-shadow: inset -1px -1px 3px #fff;
+      border: none;
     }
   }
 
   &-outline {
-    border: 1px solid #333;
-    background-color: white;
+    color: #333;
+    border: 1px solid #ccc;
+    background-color: transparent;
     transition: all 0.5s;
 
     &:hover {
@@ -23,18 +29,21 @@
       box-shadow: inset 0px 0px 24px 0px rgba(184, 184, 184, 1);
     }
 
+    &:active {
+      box-shadow: inset -1px -1px 3px #333;
+    }
+
     &-more {
+      border-color: #fff;
       color: #fff;
-      border-color: currentColor;
-      background-color: revert;
 
       &:hover {
         color: #333;
       }
-    }
 
-    &-back {
-      margin-top: 40px;
+      &:active {
+        border: none;
+      }
     }
   }
 
