@@ -58,8 +58,7 @@
   .about-components {
     padding: 0;
     justify-content: center;
-    &__img-wrapper {
-      display: none;
-    }
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 }
