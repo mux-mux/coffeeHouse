@@ -9,7 +9,13 @@ function Nav({ color }) {
       <ul>
         <li>
           <Link to="/">
-            <img src={sourze} width="35" height="35" alt="two beans" className="logo" />
+            <img
+              src={sourze}
+              width="35"
+              height="35"
+              alt="two beans"
+              className="logo"
+            />
             Coffee house
           </Link>
         </li>

@@ -1,0 +1,25 @@
+.shopping {
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__bag {
+    width: 32px;
+    height: 32px;
+
+    &-white {
+      fill: #fff;
+    }
+    &-black {
+      fill: #000;
+    }
+  }
+  &__items {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+  }
+}
