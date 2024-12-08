@@ -49,7 +49,7 @@ function ProductPage() {
               <div className="about-it__price">
                 <strong>Price: </strong>
                 <span className="about-it__price-value">{price + '$'}</span>
-                <Buttons forType="buy" />
+                <Buttons variant="button" data={from} />
               </div>
             </div>
           </div>

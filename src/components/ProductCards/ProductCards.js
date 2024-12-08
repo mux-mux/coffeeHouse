@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import './ProductCards.scss';
 
 function ProductCards({ items }) {
-  const elements = items.map((item, index) => {
+  const elements = items.map((item) => {
     const { name, src, webp, webp_large, country, price } = item;
     const pageClass =
       items.length === 3 ? 'products__best' : 'products__search';
@@ -18,7 +18,7 @@ function ProductCards({ items }) {
       <Link
         to="/productPage"
         className={`products__item ${pageClass}`}
-        key={index}
+        key={item.id}
         state={{ from: item }}
         onMouseEnter={() => preloadPageImages([webp_large])}
       >

@@ -1,22 +1,36 @@
+import { useContext } from 'react';
+import { CartContext } from '../../context/Cart';
 import { Link } from 'react-router-dom';
 import './Buttons.scss';
 
-const BUTTONS = {
-  more: (
-    <Link
-      to="/ourCoffee"
-      className="button button-outline button-outline-more button-lg"
-    >
-      More
-    </Link>
-  ),
-  buy: <button className="button button-fill button-lg">Buy</button>,
-};
+function Buttons({ variant = 'button', ...delegated }) {
+  const { addToCart } = useContext(CartContext);
 
-function Buttons({ forType = 'buy' }) {
-  const buttonType = BUTTONS[forType];
+  let Component;
 
-  return <>{buttonType}</>;
+  if (variant === 'link') {
+    Component = (
+      <Link
+        to="/ourCoffee"
+        className="button button-outline button-outline-more button-lg"
+      >
+        More
+      </Link>
+    );
+  } else if (variant === 'button') {
+    Component = (
+      <button
+        className="button button-fill button-lg"
+        onClick={() => {
+          addToCart(delegated.data);
+        }}
+      >
+        Add To Cart
+      </button>
+    );
+  }
+
+  return <>{Component}</>;
 }
 
 export default Buttons;

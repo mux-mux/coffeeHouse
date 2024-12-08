@@ -24,7 +24,7 @@ function Promo() {
             We makes every day full of energy and taste <br />
             Want to try our beans?
           </h2>
-          <Buttons forType="more" />
+          <Buttons variant="link" />
         </div>
       </div>
     </section>

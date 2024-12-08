@@ -1,6 +1,10 @@
+import { useContext } from 'react';
+import { CartContext } from '../../context/Cart';
 import './ShoppingBag.scss';
 
 function ShoppingBag({ color }) {
+  const { cartCount } = useContext(CartContext);
+
   return (
     <div className="shopping">
       <svg
@@ -18,7 +22,7 @@ function ShoppingBag({ color }) {
           />
         </g>
       </svg>
-      <span className="shopping__items">1</span>
+      <span className="shopping__items">{cartCount()}</span>
     </div>
   );
 }
