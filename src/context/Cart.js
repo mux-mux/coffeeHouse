@@ -45,7 +45,7 @@ const CartProvider = ({ children }) => {
     setCartItems([]);
   };
 
-  const cartCount = () => {
+  const getCartCount = () => {
     return cartItems.reduce((total, item) => total + item.quantity, 0);
   };
 
@@ -75,7 +75,7 @@ const CartProvider = ({ children }) => {
         removeFromCart,
         clearCart,
         getCartTotal,
-        cartCount,
+        getCartCount,
       }}
     >
       {children}

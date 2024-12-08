@@ -1,15 +1,17 @@
+import { useContext } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+
+import { CartContext } from '../context/Cart';
 import Header from '../components/Header/Header';
 import Heading from '../components/Heading/Heading';
 import SectionIcon from '../components/SectionIcon/SectionIcon';
 import Buttons from '../components/Buttons/Buttons';
 
 function ProductPage() {
+  const { addToCart } = useContext(CartContext);
   const location = useLocation();
   const navigate = useNavigate();
-  const goBack = () => {
-    navigate(-1);
-  };
+
   const { from } = location.state;
   const { name, price, src_large, webp_large, country, descr } = from;
   return (
@@ -23,12 +25,13 @@ function ProductPage() {
         </div>
       </section>
       <div className="container product-page-container">
-        <button
+        <Buttons
+          variant="button"
           className="button button-outline button-outline-back button-sm"
-          onClick={goBack}
+          onClick={() => navigate(-1)}
         >
           Back
-        </button>
+        </Buttons>
         <section className="section about-components">
           <picture className="about-components__img-wrapper">
             <source type="image/webp" srcSet={webp_large} />
@@ -49,7 +52,16 @@ function ProductPage() {
               <div className="about-it__price">
                 <strong>Price: </strong>
                 <span className="about-it__price-value">{price + '$'}</span>
-                <Buttons variant="button" data={from} />
+                <Buttons
+                  variant="button"
+                  className="button button-fill button-lg"
+                  data={from}
+                  onClick={() => {
+                    addToCart(from);
+                  }}
+                >
+                  Add To Cart
+                </Buttons>
               </div>
             </div>
           </div>

@@ -3,7 +3,7 @@ import { CartContext } from '../../context/Cart';
 import './ShoppingBag.scss';
 
 function ShoppingBag({ color }) {
-  const { cartCount } = useContext(CartContext);
+  const { getCartCount } = useContext(CartContext);
 
   return (
     <div className="shopping">
@@ -22,7 +22,7 @@ function ShoppingBag({ color }) {
           />
         </g>
       </svg>
-      <span className="shopping__items">{cartCount()}</span>
+      <span className="shopping__items">{getCartCount()}</span>
     </div>
   );
 }

@@ -24,7 +24,13 @@ function Promo() {
             We makes every day full of energy and taste <br />
             Want to try our beans?
           </h2>
-          <Buttons variant="link" />
+          <Buttons
+            variant="link"
+            className="button button-outline button-outline-more button-lg"
+            to="/ourCoffee"
+          >
+            More
+          </Buttons>
         </div>
       </div>
     </section>

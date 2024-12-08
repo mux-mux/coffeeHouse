@@ -1,31 +1,22 @@
-import { useContext } from 'react';
-import { CartContext } from '../../context/Cart';
 import { Link } from 'react-router-dom';
 import './Buttons.scss';
 
-function Buttons({ variant = 'button', ...delegated }) {
-  const { addToCart } = useContext(CartContext);
-
+function Buttons({ variant = 'button', children, ...delegated }) {
   let Component;
 
   if (variant === 'link') {
     Component = (
-      <Link
-        to="/ourCoffee"
-        className="button button-outline button-outline-more button-lg"
-      >
-        More
+      <Link to={delegated.to} className={delegated.className}>
+        {children}
       </Link>
     );
   } else if (variant === 'button') {
     Component = (
       <button
-        className="button button-fill button-lg"
-        onClick={() => {
-          addToCart(delegated.data);
-        }}
+        className={delegated.className}
+        onClick={() => delegated.onClick()}
       >
-        Add To Cart
+        {children}
       </button>
     );
   }
