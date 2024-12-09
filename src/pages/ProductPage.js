@@ -8,12 +8,12 @@ import SectionIcon from '../components/SectionIcon/SectionIcon';
 import Buttons from '../components/Buttons/Buttons';
 
 function ProductPage() {
-  const { addToCart } = useContext(CartContext);
+  const { cartItems, addToCart } = useContext(CartContext);
   const location = useLocation();
   const navigate = useNavigate();
 
   const { from } = location.state;
-  const { name, price, src_large, webp_large, country, descr } = from;
+  const { id, name, price, src_large, webp_large, country, descr } = from;
   return (
     <>
       <section className="promo promo-ourcoffee">
@@ -52,16 +52,25 @@ function ProductPage() {
               <div className="about-it__price">
                 <strong>Price: </strong>
                 <span className="about-it__price-value">{price + '$'}</span>
-                <Buttons
-                  variant="button"
-                  className="button button-fill button-lg"
-                  data={from}
-                  onClick={() => {
-                    addToCart(from);
-                  }}
-                >
-                  Add To Cart
-                </Buttons>
+                <div className="about-it__button-wrapper">
+                  <Buttons
+                    variant="button"
+                    className="button button-fill button-lg"
+                    data={from}
+                    onClick={() => {
+                      addToCart(from);
+                    }}
+                  >
+                    Add To Cart
+                  </Buttons>
+                  <span className="about-it__incart">
+                    {cartItems.map((item) => {
+                      return item.id === id
+                        ? 'Already in cart ' + item.quantity
+                        : '';
+                    })}
+                  </span>
+                </div>
               </div>
             </div>
           </div>
