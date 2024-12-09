@@ -50,8 +50,10 @@ function ProductPage() {
                 {descr}
               </p>
               <div className="about-it__price">
-                <strong>Price: </strong>
-                <span className="about-it__price-value">{price + '$'}</span>
+                <div className="about-it__price-wrapper">
+                  <strong>Price: </strong>
+                  <span className="about-it__price-value">{price + '$'}</span>
+                </div>
                 <div className="about-it__button-wrapper">
                   <Buttons
                     variant="button"
