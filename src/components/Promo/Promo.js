@@ -21,9 +21,9 @@ function Promo() {
             />
           </div>
           <h2 className="promo__text">
-            We makes every day full of energy and taste <br />
-            Want to try our beans?
+            We make every day full of energy and taste
           </h2>
+          <div className="promo__text">Want to try our beans?</div>
           <Buttons
             variant="link"
             className="button button-outline button-outline-more button-lg"

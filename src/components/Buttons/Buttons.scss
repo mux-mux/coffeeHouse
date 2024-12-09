@@ -1,4 +1,6 @@
 .button {
+  display: inline-block;
+
   &-fill {
     background-color: #333;
     color: #fff;
@@ -30,19 +32,15 @@
     }
 
     &:active {
-      box-shadow: inset -1px -1px 3px #333;
+      box-shadow: inset -1px -1px 2px #999;
     }
 
     &-more {
-      border-color: #fff;
+      border-color: currentColor;
       color: #fff;
 
       &:hover {
         color: #333;
-      }
-
-      &:active {
-        border: none;
       }
     }
   }
