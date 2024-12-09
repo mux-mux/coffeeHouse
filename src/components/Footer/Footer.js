@@ -1,10 +1,8 @@
-import Nav from '../Nav/Nav';
 import './Footer.scss';
 
 function Footer() {
   return (
     <footer className="footer">
-      <Nav color={'_black'} />
       <br />
       <div className="section__icon section__icon_black">
         <img
