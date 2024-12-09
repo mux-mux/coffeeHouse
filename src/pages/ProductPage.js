@@ -13,7 +13,7 @@ function ProductPage() {
   const navigate = useNavigate();
 
   const { from } = location.state;
-  const { id, name, price, src_large, webp_large, country, descr } = from;
+  const { id, name, price, src, country, descr } = from;
   return (
     <>
       <section className="promo promo-ourcoffee">
@@ -34,8 +34,8 @@ function ProductPage() {
         </Buttons>
         <section className="section about-components">
           <picture className="about-components__img-wrapper">
-            <source type="image/webp" srcSet={webp_large} />
-            <img src={src_large} alt={name} />
+            <source type="image/webp" srcSet={src.replace('.png', '.webp')} />
+            <img src={src} alt={name} />
           </picture>
           <div className="about-it__content">
             <Heading text="about_it" />

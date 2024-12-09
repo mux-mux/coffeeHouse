@@ -14,12 +14,15 @@ export default function Modal({ showModal, toggleModal }) {
         </div>
         <div>
           {cartItems.map((item) => {
-            const { id, name, webp, src, price, quantity } = item;
+            const { id, name, src, price, quantity } = item;
             return (
               <div key={id}>
                 <div>
                   <picture>
-                    <source type="image/webp" srcSet={webp} />
+                    <source
+                      type="image/webp"
+                      srcSet={src.replace('.png', '.webp')}
+                    />
                     <img src={src} alt={name} />
                   </picture>
                   <div>
