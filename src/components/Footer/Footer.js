@@ -5,7 +5,7 @@ function Footer() {
     <footer className="footer">
       <div className="section__icon section__icon_black">
         <img
-          src="./resources/icons/Section-footer_black.png"
+          src="./resources/icons/Section_black.png"
           alt=""
           width="35"
           height="35"

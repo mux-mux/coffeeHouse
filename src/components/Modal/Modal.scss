@@ -1,0 +1,64 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background-color: #fff;
+  color: #333;
+  padding: 0 16px;
+  cursor: default;
+
+  &__header,
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d3d3d3;
+    margin: 0 -16px;
+    padding: 8px;
+  }
+
+  &__main {
+    padding: 16px 0;
+  }
+}
+.item {
+  display: flex;
+  gap: 8px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d3d3d3;
+  }
+
+  img {
+    width: 100px;
+    aspect-ratio: 1 / 1;
+  }
+
+  &__order {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+
+    &-price {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 8px;
+  }
+}

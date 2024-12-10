@@ -50,9 +50,13 @@ const CartProvider = ({ children }) => {
   };
 
   const getCartTotal = () => {
-    return cartItems.reduce(
-      (total, item) => total + item.price * item.quantity,
-      0
+    return (
+      Math.round(
+        cartItems.reduce(
+          (total, item) => total + item.price * item.quantity,
+          0
+        ) * 100
+      ) / 100
     );
   };
 
