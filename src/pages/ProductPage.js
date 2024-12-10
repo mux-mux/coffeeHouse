@@ -39,7 +39,7 @@ function ProductPage() {
           </picture>
           <div className="about-it__content">
             <Heading text="about_it" />
-            <SectionIcon />
+            <SectionIcon color="black" />
             <div className="about-it__wrapper">
               <div className="about-it__country">
                 <strong>Country: </strong>

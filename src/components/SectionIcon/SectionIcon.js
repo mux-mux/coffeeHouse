@@ -1,10 +1,10 @@
 import './SectionIcon.scss';
 
-function SectionIcon() {
+function SectionIcon({ color }) {
   return (
-    <div className="section__icon section__icon_black">
+    <div className={`section__icon section__icon_${color}`}>
       <img
-        src="./resources/icons/Section_black.png"
+        src={`./resources/icons/Section_${color}.png`}
         alt=""
         width="30"
         height="30"

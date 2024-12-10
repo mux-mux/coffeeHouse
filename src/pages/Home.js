@@ -16,7 +16,7 @@ function Home({ threeBest }) {
       <section className="section about_us">
         <div className="container">
           <Heading text="about" />
-          <SectionIcon />
+          <SectionIcon color="black" />
           <SectionText text="about" />
         </div>
       </section>

@@ -59,7 +59,7 @@ const OurCoffee = ({ products }) => {
             </picture>
             <div className="about-components__content">
               <Heading text="beans" />
-              <SectionIcon />
+              <SectionIcon color="black" />
               <SectionText text="beans" />
             </div>
           </div>
