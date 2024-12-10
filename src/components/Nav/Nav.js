@@ -13,7 +13,7 @@ function Nav({ color }) {
               src={sourze}
               width="35"
               height="35"
-              alt="two beans"
+              alt="return to homepage"
               className="logo"
             />
             Coffee house

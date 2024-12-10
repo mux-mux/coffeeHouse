@@ -16,7 +16,7 @@ function ProductCards({ items }) {
       >
         <picture className="products__img">
           <source type="image/webp" srcSet={src.replace('.png', '.webp')} />
-          <img src={src} alt="two packs of beans" />
+          <img src={src} alt={name} />
         </picture>
         <div className="products__name">{name}</div>
         <div className="products__country">{country}</div>

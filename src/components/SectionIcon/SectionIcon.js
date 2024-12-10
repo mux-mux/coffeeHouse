@@ -5,7 +5,7 @@ function SectionIcon() {
     <div className="section__icon section__icon_black">
       <img
         src="./resources/icons/Section_black.png"
-        alt="three beans black"
+        alt=""
         width="30"
         height="30"
         className="icon"

@@ -14,7 +14,7 @@ function Promo() {
           <div className="section__icon section__icon_white">
             <img
               src="./resources/icons/Section_white.png"
-              alt="three beans white"
+              alt=""
               width="38"
               height="38"
               className="icon icon_white"
