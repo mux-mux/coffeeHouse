@@ -26,8 +26,9 @@ function ProductPage() {
       </section>
       <div className="container product-page-container">
         <Buttons
-          variant="button"
-          className="button button-outline button-outline-back button-sm"
+          as="button"
+          variant="white"
+          size="sm"
           onClick={() => navigate(-1)}
         >
           Back
@@ -56,8 +57,9 @@ function ProductPage() {
                 </div>
                 <div className="about-it__button-wrapper">
                   <Buttons
-                    variant="button"
-                    className="button button-fill button-lg"
+                    as="button"
+                    variant="black"
+                    size="lg"
                     data={from}
                     onClick={() => {
                       addToCart(from);

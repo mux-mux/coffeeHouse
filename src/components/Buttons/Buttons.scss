@@ -1,31 +1,28 @@
 .button {
   display: inline-block;
+  cursor: pointer;
+  transition: all 0.5s;
 
-  &-fill {
+  &-black {
     background-color: #333;
     color: #fff;
     border: none;
-    transition: all 0.5s;
 
     &:hover {
-      cursor: pointer;
       background-color: #555;
     }
 
     &:active {
       box-shadow: inset -1px -1px 3px #fff;
-      border: none;
     }
   }
 
-  &-outline {
+  &-white {
+    background-color: #fff;
     color: #333;
     border: 1px solid #ccc;
-    background-color: transparent;
-    transition: all 0.5s;
 
     &:hover {
-      cursor: pointer;
       background-color: #eee;
       border: 1px solid #ccc;
       box-shadow: inset 0px 0px 24px 0px rgba(184, 184, 184, 1);
@@ -33,15 +30,6 @@
 
     &:active {
       box-shadow: inset -1px -1px 2px #999;
-    }
-
-    &-more {
-      border-color: currentColor;
-      color: #fff;
-
-      &:hover {
-        color: #333;
-      }
     }
   }
 

@@ -17,11 +17,7 @@ function Promo() {
             We make every day full of energy and taste
           </h2>
           <div className="promo__text">Want to try our beans?</div>
-          <Buttons
-            variant="link"
-            className="button button-outline button-outline-more button-lg"
-            to="/ourCoffee"
-          >
+          <Buttons as="a" to="/ourCoffee" variant="white" size="lg">
             More
           </Buttons>
         </div>

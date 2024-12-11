@@ -1,27 +1,28 @@
 import { Link } from 'react-router-dom';
 import './Buttons.scss';
 
-function Buttons({ variant = 'button', children, ...delegated }) {
-  let Component;
+function Buttons({
+  as,
+  variant = 'white',
+  size = 'md',
+  children,
+  ...delegated
+}) {
+  const classes = `button button-${variant} button-${size}`;
 
-  if (variant === 'link') {
-    Component = (
-      <Link to={delegated.to} className={delegated.className}>
+  if (as === 'a') {
+    return (
+      <Link to={delegated.to} className={classes}>
         {children}
       </Link>
     );
-  } else if (variant === 'button') {
-    Component = (
-      <button
-        className={delegated.className}
-        onClick={() => delegated.onClick()}
-      >
+  } else {
+    return (
+      <button className={classes} onClick={() => delegated.onClick()}>
         {children}
       </button>
     );
   }
-
-  return <>{Component}</>;
 }
 
 export default Buttons;
