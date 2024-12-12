@@ -58,7 +58,7 @@ const OurCoffee = ({ products }) => {
               />
             </picture>
             <div className="about-components__content">
-              <Heading text="beans" />
+              <Heading as="h2">About our beans</Heading>
               <SectionIcon color="black" />
               <SectionText text="beans" />
             </div>

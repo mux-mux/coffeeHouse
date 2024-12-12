@@ -1,13 +1,12 @@
 import './Heading.scss';
 
-function Heading({ text }) {
-  const headings = {
-    about: 'About Us',
-    best: 'Our best',
-    beans: 'About our beans',
-    about_it: 'About it',
-  };
-  return <h3 className="section__header">{headings[text]}</h3>;
+function Heading({ as, children, delegated }) {
+  const Component = as;
+  return (
+    <Component className="section__header" {...delegated}>
+      {children}
+    </Component>
+  );
 }
 
 export default Heading;

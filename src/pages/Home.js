@@ -15,7 +15,7 @@ function Home({ threeBest }) {
 
       <section className="section about_us">
         <div className="container">
-          <Heading text="about" />
+          <Heading as="h2">About Us</Heading>
           <SectionIcon color="black" />
           <SectionText text="about" />
         </div>
@@ -23,7 +23,7 @@ function Home({ threeBest }) {
 
       <section className="section products__our-best">
         <div className="container">
-          <Heading text="best" />
+          <Heading as="h2">Our best</Heading>
           <ProductCards items={threeBest} />
         </div>
       </section>
