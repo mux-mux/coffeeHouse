@@ -26,7 +26,7 @@ function ProductPage() {
           </div>
         </div>
       </section>
-      <div className="container product-page-container">
+      <div className="container mt4">
         <Buttons
           as="button"
           variant="white"
