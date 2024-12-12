@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { CartContext } from '../../context/Cart';
 import Buttons from '../Buttons/Buttons';
+import Heading from '../Heading/Heading';
 import './Modal.scss';
 
 export default function Modal({ showModal, toggleModal }) {
@@ -20,8 +21,8 @@ export default function Modal({ showModal, toggleModal }) {
     showModal && (
       <div className="overlay" onClick={handleClickOnOverlay}>
         <div className="modal" onClick={handleClickOnContainer}>
-          <div className="modal__header">
-            <h3>Cart</h3>
+          <header className="modal__header">
+            <Heading as="h4">Cart</Heading>
             <Buttons
               as="button"
               variant="black"
@@ -30,8 +31,8 @@ export default function Modal({ showModal, toggleModal }) {
             >
               X
             </Buttons>
-          </div>
-          <div className="modal__main">
+          </header>
+          <main className="modal__main">
             {cartItems.map((item) => {
               const { id, name, src, price, quantity } = item;
               return (
@@ -44,7 +45,7 @@ export default function Modal({ showModal, toggleModal }) {
                     <img src={src} alt={name} />
                   </picture>
                   <div className="item__order">
-                    <h4>{name}</h4>
+                    <span className="item__name">{name}</span>
                     <div className="item__buttons">
                       <Buttons
                         as="button"
@@ -73,16 +74,16 @@ export default function Modal({ showModal, toggleModal }) {
                 </div>
               );
             })}
-          </div>
+          </main>
           {cartItems.length > 0 ? (
-            <div className="modal__footer">
-              <h3>Total: {getCartTotal()}$</h3>
+            <footer className="modal__footer">
+              <div className="item__total">Total: {getCartTotal()}$</div>
               <Buttons as="button" variant="black" size="lg">
                 Checkout
               </Buttons>
-            </div>
+            </footer>
           ) : (
-            <h3>Your cart is empty</h3>
+            <div className="item__empty">Your cart is empty</div>
           )}
         </div>
       </div>

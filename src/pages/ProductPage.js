@@ -20,7 +20,9 @@ function ProductPage() {
         <Header />
         <div className="container">
           <div className="section promo__content">
-            <h1 className="promo__header">Our Coffee</h1>
+            <Heading as="h2" className="promo__header">
+              Our Coffee
+            </Heading>
           </div>
         </div>
       </section>
@@ -39,7 +41,7 @@ function ProductPage() {
             <img src={src} alt={name} />
           </picture>
           <div className="about-it__content">
-            <Heading as="h2">About it</Heading>
+            <Heading as="h3">About it</Heading>
             <SectionIcon color="black" />
             <div className="about-it__wrapper">
               <div className="about-it__country">

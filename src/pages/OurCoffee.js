@@ -40,7 +40,9 @@ const OurCoffee = ({ products }) => {
         <Header />
         <div className="container">
           <div className="section promo__content">
-            <h1 className="promo__header">Our Coffee</h1>
+            <Heading as="h2" className="promo__header">
+              Our Coffee
+            </Heading>
           </div>
         </div>
       </section>
@@ -58,7 +60,7 @@ const OurCoffee = ({ products }) => {
               />
             </picture>
             <div className="about-components__content">
-              <Heading as="h2">About our beans</Heading>
+              <Heading as="h3">About our beans</Heading>
               <SectionIcon color="black" />
               <SectionText text="beans" />
             </div>
