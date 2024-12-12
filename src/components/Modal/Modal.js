@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { CartContext } from '../../context/Cart';
+import Buttons from '../Buttons/Buttons';
 import './Modal.scss';
 
 export default function Modal({ showModal, toggleModal }) {
@@ -21,7 +22,14 @@ export default function Modal({ showModal, toggleModal }) {
         <div className="modal" onClick={handleClickOnContainer}>
           <div className="modal__header">
             <h3>Cart</h3>
-            <button onClick={toggleModal}>X</button>
+            <Buttons
+              as="button"
+              variant="black"
+              size="sm"
+              onClick={toggleModal}
+            >
+              X
+            </Buttons>
           </div>
           <div className="modal__main">
             {cartItems.map((item) => {
@@ -38,21 +46,27 @@ export default function Modal({ showModal, toggleModal }) {
                   <div className="item__order">
                     <h4>{name}</h4>
                     <div className="item__buttons">
-                      <button
+                      <Buttons
+                        as="button"
+                        variant="white"
+                        size="sm"
                         onClick={() => {
                           removeFromCart(item);
                         }}
                       >
                         -
-                      </button>
+                      </Buttons>
                       <p>{quantity}</p>
-                      <button
+                      <Buttons
+                        as="button"
+                        variant="white"
+                        size="sm"
                         onClick={() => {
                           addToCart(item);
                         }}
                       >
                         +
-                      </button>
+                      </Buttons>
                     </div>
                     <span className="item__order-price">{price}$</span>
                   </div>
@@ -63,7 +77,9 @@ export default function Modal({ showModal, toggleModal }) {
           {cartItems.length > 0 ? (
             <div className="modal__footer">
               <h3>Total: {getCartTotal()}$</h3>
-              <button>Checkout</button>
+              <Buttons as="button" variant="black" size="lg">
+                Checkout
+              </Buttons>
             </div>
           ) : (
             <h3>Your cart is empty</h3>

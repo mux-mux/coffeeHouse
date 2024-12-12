@@ -28,7 +28,7 @@ function ProductPage() {
         <Buttons
           as="button"
           variant="white"
-          size="sm"
+          size="md"
           onClick={() => navigate(-1)}
         >
           Back
