@@ -3,11 +3,11 @@ import ShoppingBag from '../ShoppingBag/ShoppingBag';
 
 import './Header.scss';
 
-function Header() {
+function Header({ color }) {
   return (
     <header className="header">
-      <Nav color={'_white'} />
-      <ShoppingBag color="white" />
+      <Nav color={color} />
+      <ShoppingBag color={color} />
     </header>
   );
 }

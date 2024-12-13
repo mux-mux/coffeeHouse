@@ -37,7 +37,7 @@ const OurCoffee = ({ products }) => {
   return (
     <>
       <section className="promo promo-ourcoffee">
-        <Header />
+        <Header color="white" />
         <div className="container">
           <div className="section promo__content">
             <Heading as="h2" className="promo__header">

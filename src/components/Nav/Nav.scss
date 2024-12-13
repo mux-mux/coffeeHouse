@@ -1,10 +1,5 @@
 @import '../../utils/variables.scss';
 
-.logo {
-  transform: translateX(5px);
-  width: 35px;
-  height: 35px;
-}
 .nav {
   & ul {
     display: flex;

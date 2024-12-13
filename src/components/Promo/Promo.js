@@ -9,7 +9,7 @@ import SectionIcon from '../SectionIcon/SectionIcon';
 function Promo() {
   return (
     <section className="promo promo-main">
-      <Header />
+      <Header color="white" />
       <div className="container">
         <div className="section promo__content">
           <Heading as="h1" className="promo__header">

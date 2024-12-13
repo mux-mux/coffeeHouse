@@ -1,21 +1,14 @@
 import { Link } from 'react-router-dom';
+import Logo from '../Logo/Logo';
 import './Nav.scss';
 
 function Nav({ color }) {
-  let clazz = 'nav nav' + color,
-    sourze = './resources/icons/Logo' + color + '.png';
   return (
-    <nav className={clazz}>
+    <nav className={'nav nav_' + color}>
       <ul>
         <li>
           <Link to="/">
-            <img
-              src={sourze}
-              width="35"
-              height="35"
-              alt="return to homepage"
-              className="logo"
-            />
+            <Logo color={color} />
             Coffee house
           </Link>
         </li>
