@@ -1,5 +1,14 @@
 @import '../../utils/variables.scss';
 
+.paragraph {
+  font-size: 14px;
+  line-height: 20px;
+}
+.pBreak {
+  display: block;
+  margin-top: 25px;
+}
+
 .about-components {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -44,23 +53,12 @@
     position: relative;
   }
 }
-.section__text {
-  font-size: 14px;
-  line-height: 20px;
-}
-.about_us__text {
-  padding: 0 100px;
-  margin: 40px auto 0;
-}
+
 .section__divider {
   width: 240px;
   height: 1px;
   background-color: #000;
   margin: 0 auto;
-}
-.pBreak {
-  display: block;
-  margin-top: 25px;
 }
 
 @media only screen and (max-width: $md) {

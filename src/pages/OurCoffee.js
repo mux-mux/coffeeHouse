@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import Header from '../components/Header/Header';
-import SectionText from '../components/SectionText/SectionText';
+import Paragraph from '../components/Paragraph/Paragraph';
 import Heading from '../components/Heading/Heading';
 import SectionIcon from '../components/SectionIcon/SectionIcon';
 import Search from '../components/Search/Search';
@@ -62,7 +62,13 @@ const OurCoffee = ({ products }) => {
             <div className="about-components__content">
               <Heading as="h3">About our beans</Heading>
               <SectionIcon color="black" />
-              <SectionText text="beans" />
+              <Paragraph className="paragraph mt3">
+                Our carefully curated selection of coffee beans offers something
+                for every taste and brewing style.
+                <span className="pBreak"></span>
+                Each bag is freshly packed to ensure exceptional quality and
+                flavor in every brew.
+              </Paragraph>
             </div>
           </div>
         </div>
