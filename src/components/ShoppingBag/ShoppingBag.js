@@ -1,22 +1,22 @@
 import { useContext, useState } from 'react';
 
 import { CartContext } from '../../context/Cart';
-import Modal from '../../components/Modal/Modal';
+import Cart from '../Cart/Cart';
 import './ShoppingBag.scss';
 
 function ShoppingBag({ color }) {
-  const [showModal, setshowModal] = useState(false);
+  const [shownCart, setShownCart] = useState(false);
 
   const { getCartCount } = useContext(CartContext);
 
-  const toggleModal = () => {
-    setshowModal(!showModal);
+  const toggleCart = () => {
+    setShownCart(!shownCart);
   };
 
   return (
     <>
-      {!showModal && (
-        <div className="shopping" onClick={toggleModal}>
+      {!shownCart && (
+        <div className="shopping" onClick={toggleCart}>
           <svg
             id="Capa_1"
             viewBox="0 0 483.1 483.1"
@@ -35,7 +35,7 @@ function ShoppingBag({ color }) {
           <span className="shopping__items">{getCartCount()}</span>
         </div>
       )}
-      <Modal showModal={showModal} toggleModal={toggleModal} />
+      <Cart shownCart={shownCart} toggleCart={toggleCart} />
     </>
   );
 }

@@ -2,15 +2,15 @@ import { useContext } from 'react';
 import { CartContext } from '../../context/Cart';
 import Buttons from '../Buttons/Buttons';
 import Heading from '../Heading/Heading';
-import './Modal.scss';
+import './Cart.scss';
 
-export default function Modal({ showModal, toggleModal }) {
+export default function Cart({ shownCart, toggleCart }) {
   const { cartItems, addToCart, removeFromCart, getCartTotal } =
     useContext(CartContext);
 
   const handleClickOnOverlay = (e) => {
     e.stopPropagation();
-    toggleModal(false);
+    toggleCart(false);
   };
 
   const handleClickOnContainer = (e) => {
@@ -18,21 +18,16 @@ export default function Modal({ showModal, toggleModal }) {
   };
 
   return (
-    showModal && (
+    shownCart && (
       <div className="overlay" onClick={handleClickOnOverlay}>
-        <div className="modal" onClick={handleClickOnContainer}>
-          <header className="modal__header">
+        <div className="cart" onClick={handleClickOnContainer}>
+          <header className="cart__header">
             <Heading as="h4">Cart</Heading>
-            <Buttons
-              as="button"
-              variant="black"
-              size="sm"
-              onClick={toggleModal}
-            >
+            <Buttons as="button" variant="black" size="sm" onClick={toggleCart}>
               X
             </Buttons>
           </header>
-          <main className="modal__main">
+          <main className="cart__main">
             {cartItems.map((item) => {
               const { id, name, src, price, quantity } = item;
               return (
@@ -42,9 +37,9 @@ export default function Modal({ showModal, toggleModal }) {
                       type="image/webp"
                       srcSet={src.replace('.png', '.webp')}
                     />
-                    <img src={src} alt={name} />
+                    <img src={src} alt={name} className="item__image" />
                   </picture>
-                  <div className="item__order">
+                  <div className="item__ordered">
                     <span className="item__name">{name}</span>
                     <div className="item__buttons">
                       <Buttons
@@ -69,21 +64,21 @@ export default function Modal({ showModal, toggleModal }) {
                         +
                       </Buttons>
                     </div>
-                    <span className="item__order-price">{price}$</span>
+                    <span className="item__ordered-price">{price}$</span>
                   </div>
                 </div>
               );
             })}
           </main>
           {cartItems.length > 0 ? (
-            <footer className="modal__footer">
-              <div className="item__total">Total: {getCartTotal()}$</div>
+            <footer className="cart__footer">
+              <div className="cart__total">Total: {getCartTotal()}$</div>
               <Buttons as="button" variant="black" size="lg">
                 Checkout
               </Buttons>
             </footer>
           ) : (
-            <div className="item__empty">Your cart is empty</div>
+            <div className="cart__empty">Your cart is empty</div>
           )}
         </div>
       </div>

@@ -15,7 +15,7 @@
   isolation: isolate;
   z-index: 100;
 }
-.modal {
+.cart {
   @include absolute-position-full-height;
   right: 0;
   background-color: #fff;
@@ -36,6 +36,11 @@
   &__main {
     padding: 16px 0;
   }
+
+  &__total,
+  &__empty {
+    font-size: 24px;
+  }
 }
 .item {
   display: flex;
@@ -47,7 +52,7 @@
     border-bottom: 1px solid #d3d3d3;
   }
 
-  img {
+  &__image {
     width: 100px;
     aspect-ratio: 1 / 1;
   }
@@ -56,7 +61,7 @@
     font-size: 16px;
   }
 
-  &__order {
+  &__ordered {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,10 +76,5 @@
     display: flex;
     align-items: center;
     gap: 8px;
-  }
-
-  &__total,
-  &__empty {
-    font-size: 24px;
   }
 }
