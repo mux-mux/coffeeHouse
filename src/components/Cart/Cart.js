@@ -73,7 +73,7 @@ export default function Cart({ shownCart, toggleCart }) {
           {cartItems.length > 0 ? (
             <footer className="cart__footer">
               <div className="cart__total">Total: {getCartTotal()}$</div>
-              <Buttons as="button" variant="black" size="lg">
+              <Buttons as="a" to="/checkout" variant="black" size="lg">
                 Checkout
               </Buttons>
             </footer>

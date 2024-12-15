@@ -6,6 +6,7 @@ import Layout from './pages/Layout';
 import OurCoffee from './pages/OurCoffee';
 import Home from './pages/Home';
 import ProductPage from './pages/ProductPage';
+import Checkout from './pages/Checkout/Checkout';
 
 function App() {
   const [items, setItems] = useState([]);
@@ -25,6 +26,7 @@ function App() {
           <Route index element={<Home threeBest={threeBest} />} />
           <Route path="ourCoffee" element={<OurCoffee products={items} />} />
           <Route path="productPage" element={<ProductPage />} />
+          <Route path="checkout" element={<Checkout />} />
         </Route>
       </Routes>
     </HashRouter>
