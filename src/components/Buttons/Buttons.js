@@ -16,6 +16,12 @@ function Buttons({
         {children}
       </Link>
     );
+  } else if (as === 'submit') {
+    return (
+      <button type="submit" className={classes} {...delegated.form}>
+        {children}
+      </button>
+    );
   } else {
     return (
       <button className={classes} onClick={() => delegated.onClick()}>

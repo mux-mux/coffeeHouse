@@ -1,0 +1,61 @@
+.checkout {
+  max-width: 500px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+
+  &__summary {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-top: 1px solid #ddd;
+  }
+
+  &__required {
+    font-size: 0.8rem;
+  }
+
+  &__total {
+    font-size: 1.4rem;
+  }
+
+  &__items {
+    width: fit-content;
+
+    & li:not(:first-of-type) {
+      margin-top: 2px;
+      padding-top: 2px;
+      border-top: 1px solid #ddd;
+    }
+  }
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.error-message {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  color: red;
+  font-size: 0.8em;
+}
