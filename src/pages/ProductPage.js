@@ -6,6 +6,7 @@ import Header from '../components/Header/Header';
 import Heading from '../components/Heading/Heading';
 import SectionIcon from '../components/SectionIcon/SectionIcon';
 import Buttons from '../components/Buttons/Buttons';
+import BackButton from '../components/Buttons/BackButton';
 
 function ProductPage() {
   const { cartItems, addToCart } = useContext(CartContext);
@@ -26,15 +27,16 @@ function ProductPage() {
           </div>
         </div>
       </section>
-      <div className="container mt4">
-        <Buttons
+      <div className="container">
+        <BackButton
           as="button"
           variant="white"
           size="md"
+          className="mt4"
           onClick={() => navigate(-1)}
         >
           Back
-        </Buttons>
+        </BackButton>
         <section className="section about-components">
           <picture className="about-components__img-wrapper">
             <source type="image/webp" srcSet={src.replace('.png', '.webp')} />

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Header from '../components/Header/Header';
 import Paragraph from '../components/Paragraph/Paragraph';
@@ -7,10 +8,13 @@ import SectionIcon from '../components/SectionIcon/SectionIcon';
 import Search from '../components/Search/Search';
 import Filter from '../components/Filter/Filter';
 import ProductCards from '../components/ProductCards/ProductCards';
+import BackButton from '../components/Buttons/BackButton';
 
 const OurCoffee = ({ products }) => {
   const [filter, setFilter] = useState('All');
   const [search, setSearch] = useState('');
+
+  const navigate = useNavigate();
 
   const searchQuery = (query) => setSearch(query);
   const filterCountry = (country) => setFilter(country);
@@ -48,7 +52,15 @@ const OurCoffee = ({ products }) => {
       </section>
       <section className="section">
         <div className="container">
-          <div className="about-components">
+          <BackButton
+            as="button"
+            variant="white"
+            size="md"
+            onClick={() => navigate(-1)}
+          >
+            Back
+          </BackButton>
+          <div className="about-components mt4">
             <picture className="about-components__img-wrapper">
               <source
                 type="image/webp"

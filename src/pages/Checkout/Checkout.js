@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../../context/Cart';
 
 import Buttons from '../../components/Buttons/Buttons';
+import BackButton from '../../components/Buttons/BackButton';
 import Heading from '../../components/Heading/Heading';
 import './Checkout.scss';
 
@@ -62,15 +63,16 @@ const Checkout = () => {
           <span>Your order has been placed successfully.</span>
         </div>
       ) : (
-        <div className="container mt4">
-          <Buttons
+        <div className="container">
+          <BackButton
             as="button"
             variant="white"
             size="md"
+            className="mt4"
             onClick={() => navigate(-1)}
           >
             Back
-          </Buttons>
+          </BackButton>
 
           <div className="checkout mt4 mcenter">
             <Heading as="h2">Checkout</Heading>
