@@ -13,7 +13,7 @@ function Nav({ color }) {
           </Link>
         </li>
         <li>
-          <Link to="/ourCoffee">Our coffee</Link>
+          <Link to="/ourcoffee">Our coffee</Link>
         </li>
       </ul>
     </nav>

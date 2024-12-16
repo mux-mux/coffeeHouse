@@ -9,7 +9,7 @@ function ProductCards({ items }) {
 
     return (
       <Link
-        to="/productPage"
+        to="/productpage"
         className={`products__item ${pageClass}`}
         key={id}
         state={{ from: item }}

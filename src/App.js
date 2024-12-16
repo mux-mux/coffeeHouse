@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getItems } from './services/ItemsService';
 
@@ -20,16 +20,16 @@ function App() {
   const threeBest = items.slice(0, 3);
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home threeBest={threeBest} />} />
-          <Route path="ourCoffee" element={<OurCoffee products={items} />} />
-          <Route path="productPage" element={<ProductPage />} />
-          <Route path="checkout" element={<Checkout />} />
+          <Route path="/ourcoffee" element={<OurCoffee products={items} />} />
+          <Route path="/productpage" element={<ProductPage />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Route>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

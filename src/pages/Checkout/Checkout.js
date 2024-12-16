@@ -33,7 +33,7 @@ const Checkout = () => {
     if (!formData.address.length) {
       newErrors.address = 'Address is required';
     }
-    setErrors(newErrors);
+
     return newErrors;
   };
 
