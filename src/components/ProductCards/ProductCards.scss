@@ -4,6 +4,8 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 70px;
+  text-align: right;
+
   &__item {
     box-sizing: border-box;
     color: #000;
@@ -12,28 +14,31 @@
     border-radius: 8px;
     font-size: 14px;
   }
+
   &__best {
     background: rgba(255, 255, 255, 0.65);
   }
+
   &__search {
     padding-top: 37px;
     background-color: #fff;
     filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
   }
+
   &__name {
     margin: 10px 0 15px 0;
   }
-  &__price,
-  &__country {
-    text-align: right;
-  }
+
   &__price {
     font-weight: 700;
   }
+
   &__country {
     margin-bottom: 14px;
   }
+
   &__our-best {
+    text-align: center;
     background-position: top center;
     background-repeat: repeat-y;
     background-size: cover;

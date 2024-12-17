@@ -8,7 +8,9 @@ function Buttons({
   children,
   ...delegated
 }) {
-  const classes = `button button-${variant} button-${size} ${delegated.className ? delegated.className : ''}`;
+  const classes = `button button-${variant} button-${size}${
+    delegated.className ? ` ${delegated.className}` : ''
+  }`;
 
   if (as === 'a') {
     return (
