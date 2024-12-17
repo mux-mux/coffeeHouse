@@ -5,7 +5,7 @@ import { getItems } from './services/ItemsService';
 import Layout from './pages/Layout';
 import OurCoffee from './pages/OurCoffee';
 import Home from './pages/Home';
-import ProductPage from './pages/ProductPage';
+import ProductPage from './pages/ProductPage/ProductPage';
 import Checkout from './pages/Checkout/Checkout';
 
 function App() {

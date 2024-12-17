@@ -5,8 +5,6 @@ function Logo({ color }) {
     <>
       <img
         src={'./resources/logo/Logo_' + color + '.png'}
-        width="35"
-        height="35"
         alt="return to homepage"
         className="logo"
       />

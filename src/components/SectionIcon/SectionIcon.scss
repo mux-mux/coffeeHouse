@@ -1,4 +1,4 @@
-.section__icon {
+.divider {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,8 +19,9 @@
   &_black::before {
     background-color: #000;
   }
-}
-.icon {
-  width: 30px;
-  height: 30px;
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+  }
 }

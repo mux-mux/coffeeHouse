@@ -20,7 +20,7 @@ function ShoppingBag({ color }) {
           <svg
             id="Capa_1"
             viewBox="0 0 483.1 483.1"
-            className={`shopping__bag shopping__bag-` + color}
+            className={`shopping__icon shopping__icon-` + color}
           >
             <g>
               <path
@@ -32,7 +32,7 @@ function ShoppingBag({ color }) {
               />
             </g>
           </svg>
-          <span className="shopping__items">{getCartCount()}</span>
+          <span className="shopping__count">{getCartCount()}</span>
         </div>
       )}
       <Cart shownCart={shownCart} toggleCart={toggleCart} />

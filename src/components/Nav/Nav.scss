@@ -1,28 +1,28 @@
 @import '../../utils/variables.scss';
 
 .nav {
-  & ul {
+  &__list {
     display: flex;
     align-items: flex-end;
     gap: 40px;
   }
-  & ul li a {
+
+  &__link {
     font-size: 12px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-  &_white ul li a {
-    color: #fff;
-  }
-  &_black ul li a {
-    color: #000;
-  }
-  &_black ul {
-    justify-content: center;
+    &-white {
+      color: #fff;
+    }
+    &-black {
+      color: #000;
+    }
   }
 }
 
 @media only screen and (max-width: $sm) {
-  .nav ul {
-    justify-content: center;
+  .nav {
+    &__list {
+      justify-content: center;
+    }
   }
 }

@@ -1,12 +1,13 @@
 import { useContext } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-import { CartContext } from '../context/Cart';
-import Header from '../components/Header/Header';
-import Heading from '../components/Heading/Heading';
-import SectionIcon from '../components/SectionIcon/SectionIcon';
-import Buttons from '../components/Buttons/Buttons';
-import BackButton from '../components/Buttons/BackButton';
+import { CartContext } from '../../context/Cart';
+import Header from '../../components/Header/Header';
+import Heading from '../../components/Heading/Heading';
+import SectionIcon from '../../components/SectionIcon/SectionIcon';
+import Buttons from '../../components/Buttons/Buttons';
+import BackButton from '../../components/Buttons/BackButton';
+import './ProductPage.scss';
 
 function ProductPage() {
   const { cartItems, addToCart } = useContext(CartContext);

@@ -77,7 +77,7 @@ const OurCoffee = ({ products }) => {
               <Paragraph className="paragraph mt3">
                 Our carefully curated selection of coffee beans offers something
                 for every taste and brewing style.
-                <span className="pBreak"></span>
+                <span className="db mt3"></span>
                 Each bag is freshly packed to ensure exceptional quality and
                 flavor in every brew.
               </Paragraph>
@@ -85,7 +85,7 @@ const OurCoffee = ({ products }) => {
           </div>
         </div>
       </section>
-      <div className="section__divider"></div>
+      <div className="about__divider"></div>
 
       <div className="container">
         <div className="search-filter__wrapper">

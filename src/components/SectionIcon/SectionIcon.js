@@ -2,13 +2,11 @@ import './SectionIcon.scss';
 
 function SectionIcon({ color }) {
   return (
-    <div className={`section__icon section__icon_${color}`}>
+    <div className={`divider divider_${color}`}>
       <img
         src={`./resources/icons/Section_${color}.png`}
         alt=""
-        width="30"
-        height="30"
-        className="icon"
+        className="divider__icon"
       />
     </div>
   );

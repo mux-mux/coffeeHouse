@@ -1,8 +1,12 @@
 import './Heading.scss';
 
-function Heading({ as, children, ...delegated }) {
+function Heading({ as, children, className }) {
   const Component = as;
-  return <Component {...delegated}>{children}</Component>;
+  return (
+    <Component className={`${as} ${className ? className : ''}`}>
+      {children}
+    </Component>
+  );
 }
 
 export default Heading;

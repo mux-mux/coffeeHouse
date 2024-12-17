@@ -27,7 +27,7 @@ function Home({ threeBest }) {
             crave quality in every cup. Our offerings are carefully curated to
             ensure freshness, flavor, and satisfaction, making your coffee
             experience truly exceptional.
-            <span className="pBreak"></span>
+            <span className="db mt3"></span>
             At our store, we also feature the exquisite{' '}
             <strong>AROMISTICO Coffee Beans (1kg)</strong>, crafted to transport
             you to the heart of Italian coffee culture. With every bag, we
