@@ -5,6 +5,7 @@ import { CartContext } from '../../context/Cart';
 import Buttons from '../../components/Buttons/Buttons';
 import BackButton from '../../components/Buttons/BackButton';
 import Heading from '../../components/Heading/Heading';
+import Modal from '../../components/Modal/Modal';
 import './Checkout.scss';
 
 function Checkout() {
@@ -18,9 +19,14 @@ function Checkout() {
     address: '',
   });
   const [errors, setErrors] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
-  const validateForm = () => {
+  function closeModal() {
+    setShowModal(false);
+    navigate(-1);
+  }
+
+  function validateForm() {
     const newErrors = {};
     if (!formData.name.length) {
       newErrors.name = 'Name is required';
@@ -36,32 +42,37 @@ function Checkout() {
     }
 
     return newErrors;
-  };
+  }
 
-  const handleSubmit = (e) => {
+  function handleSubmit(e) {
     e.preventDefault();
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
       setErrors({});
-      setIsSubmitted(true);
       clearCart();
+      setShowModal(true);
     }
-  };
+  }
 
-  const handleChange = (e) => {
+  function handleChange(e) {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-  };
+  }
 
   return (
     <>
-      {isSubmitted ? (
-        <div className="modal modal-success">
+      {showModal ? (
+        <Modal
+          type="success"
+          title="Success!"
+          onClose={closeModal}
+          timeout={10000}
+        >
           <Heading as="h3">Thank you for your purchase!</Heading>
           <span>Your order has been placed successfully.</span>
-        </div>
+        </Modal>
       ) : (
         <div className="container">
           <BackButton
