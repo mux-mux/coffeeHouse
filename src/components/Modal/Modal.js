@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 
 import Heading from '../Heading/Heading';
+import Buttons from '../Buttons/Buttons';
 import './Modal.scss';
 
 function Modal({ type = 'info', title, onClose, timeout = 10000, children }) {
@@ -21,9 +22,15 @@ function Modal({ type = 'info', title, onClose, timeout = 10000, children }) {
   return (
     <div className="modal-overlay" onClick={handleOverlayClick}>
       <div className={`modal-content modal-${type}`}>
-        <button className="modal-close" onClick={onClose}>
+        <Buttons
+          as="button"
+          variant="black"
+          size="sm"
+          className="modal-close"
+          onClick={onClose}
+        >
           &times;
-        </button>
+        </Buttons>
         <Heading as="h2" className="modal-title">
           {title}
         </Heading>

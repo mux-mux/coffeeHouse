@@ -24,7 +24,7 @@ function Cart({ shownCart, toggleCart }) {
           <header className="cart__header">
             <Heading as="h4">Cart</Heading>
             <Buttons as="button" variant="black" size="sm" onClick={toggleCart}>
-              X
+              &times;
             </Buttons>
           </header>
           <main className="cart__main">
