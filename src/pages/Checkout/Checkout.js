@@ -7,7 +7,7 @@ import BackButton from '../../components/Buttons/BackButton';
 import Heading from '../../components/Heading/Heading';
 import './Checkout.scss';
 
-const Checkout = () => {
+function Checkout() {
   const navigate = useNavigate();
 
   const { cartItems, getCartTotal, clearCart } = useContext(CartContext);
@@ -147,6 +147,6 @@ const Checkout = () => {
       )}
     </>
   );
-};
+}
 
 export default Checkout;

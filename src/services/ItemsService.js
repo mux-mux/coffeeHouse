@@ -1,4 +1,4 @@
-const getItems = async (url) => {
+async function getItems(url) {
   try {
     const res = await fetch(url, {
       method: 'GET',
@@ -14,6 +14,6 @@ const getItems = async (url) => {
     alert('There was an issue with fetching data');
     return error;
   }
-};
+}
 
-export { getItems };
+export default getItems;

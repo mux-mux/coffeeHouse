@@ -2,12 +2,13 @@ import './Filter.scss';
 
 function Filter({ filter, name }) {
   const countries = ['All', 'Brazil', 'Kenya', 'Columbia'];
+
   const filterBtn = countries.map((item, index) => {
     const active = name === item;
-    const clazz = active ? 'filter__option filter_active' : 'filter__option';
+
     return (
       <button
-        className={clazz}
+        className={`filter__option${active ? ' filter_active' : ''}`}
         data-country={item}
         key={index}
         onClick={(e) => filter(e.currentTarget.getAttribute('data-country'))}

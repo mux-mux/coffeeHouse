@@ -4,13 +4,13 @@ import './ProductCards.scss';
 function ProductCards({ items }) {
   const elements = items.map((item) => {
     const { id, name, src, country, price } = item;
-    const pageClass =
-      items.length === 3 ? 'products__best' : 'products__search';
 
     return (
       <Link
         to="/productpage"
-        className={`products__item ${pageClass}`}
+        className={`products__item ${
+          items.length === 3 ? 'products__best' : 'products__search'
+        }`}
         key={id}
         state={{ from: item }}
       >

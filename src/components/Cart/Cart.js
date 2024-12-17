@@ -4,18 +4,18 @@ import Buttons from '../Buttons/Buttons';
 import Heading from '../Heading/Heading';
 import './Cart.scss';
 
-export default function Cart({ shownCart, toggleCart }) {
+function Cart({ shownCart, toggleCart }) {
   const { cartItems, addToCart, removeFromCart, getCartTotal } =
     useContext(CartContext);
 
-  const handleClickOnOverlay = (e) => {
+  function handleClickOnOverlay(e) {
     e.stopPropagation();
     toggleCart(false);
-  };
+  }
 
-  const handleClickOnContainer = (e) => {
+  function handleClickOnContainer(e) {
     e.stopPropagation();
-  };
+  }
 
   return (
     shownCart && (
@@ -85,3 +85,5 @@ export default function Cart({ shownCart, toggleCart }) {
     )
   );
 }
+
+export default Cart;

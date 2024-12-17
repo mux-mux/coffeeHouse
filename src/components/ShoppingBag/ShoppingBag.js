@@ -9,9 +9,9 @@ function ShoppingBag({ color }) {
 
   const { getCartCount } = useContext(CartContext);
 
-  const toggleCart = () => {
+  function toggleCart() {
     setShownCart(!shownCart);
-  };
+  }
 
   return (
     <>

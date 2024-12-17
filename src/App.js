@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { getItems } from './services/ItemsService';
+import getItems from './services/ItemsService';
 
 import Layout from './pages/Layout';
 import OurCoffee from './pages/OurCoffee';

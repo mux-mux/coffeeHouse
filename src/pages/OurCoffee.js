@@ -10,7 +10,7 @@ import Filter from '../components/Filter/Filter';
 import ProductCards from '../components/ProductCards/ProductCards';
 import BackButton from '../components/Buttons/BackButton';
 
-const OurCoffee = ({ products }) => {
+function OurCoffee({ products }) {
   const [filter, setFilter] = useState('All');
   const [search, setSearch] = useState('');
 
@@ -101,6 +101,6 @@ const OurCoffee = ({ products }) => {
       </section>
     </>
   );
-};
+}
 
 export default OurCoffee;
