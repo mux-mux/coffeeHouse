@@ -22,12 +22,12 @@
 
   &__items {
     width: fit-content;
+  }
 
-    & li:not(:first-of-type) {
-      margin-top: 2px;
-      padding-top: 2px;
-      border-top: 1px solid #ddd;
-    }
+  &__item:not(:first-of-type) {
+    margin-top: 2px;
+    padding-top: 2px;
+    border-top: 1px solid #ddd;
   }
 }
 
@@ -55,7 +55,8 @@
 .error-message {
   position: absolute;
   left: 0;
-  bottom: -20px;
+  bottom: 0;
+  transform: translateY(120%);
   color: red;
   font-size: 0.8em;
 }

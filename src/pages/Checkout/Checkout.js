@@ -125,7 +125,7 @@ function Checkout() {
               <Heading as="h4">Cart Summary</Heading>
               <ul className="checkout__items">
                 {cartItems.map((item) => (
-                  <li key={item.id}>
+                  <li className="checkout__item" key={item.id}>
                     {item.name} - {item.quantity} x ${item.price} = $
                     {item.quantity * item.price}
                   </li>
