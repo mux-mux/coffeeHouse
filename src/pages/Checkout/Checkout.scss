@@ -1,3 +1,5 @@
+@import '../../utils/variables.scss';
+
 .checkout {
   max-width: 500px;
   padding: 20px;
@@ -13,11 +15,11 @@
   }
 
   &__required {
-    font-size: 0.8rem;
+    font-size: $font-size-sm;
   }
 
   &__total {
-    font-size: 1.4rem;
+    font-size: $font-size-xlg;
   }
 
   &__items {
@@ -58,5 +60,5 @@
   bottom: 0;
   transform: translateY(120%);
   color: red;
-  font-size: 0.8em;
+  font-size: $font-size-sm;
 }

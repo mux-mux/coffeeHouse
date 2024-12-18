@@ -22,7 +22,7 @@
     &__wrapper {
       text-align: left;
       margin-top: 25px;
-      font-size: 14px;
+      font-size: $font-size-sm;
     }
     &__text {
       margin: 16px 0;
@@ -34,7 +34,7 @@
       gap: 16px;
 
       &-value {
-        font-size: 24px;
+        font-size: $font-size-xlg;
       }
     }
     &__incart {

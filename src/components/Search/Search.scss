@@ -2,7 +2,7 @@
 
 .search {
   &-filter__label {
-    font-size: 14px;
+    font-size: $font-size-sm;
     color: #000;
   }
   &__label {
@@ -19,7 +19,7 @@
     border-radius: 4px;
   }
   &__input::placeholder {
-    font-size: 12px;
+    font-size: $font-size-xsm;
     text-align: center;
   }
   &-filter__wrapper {
