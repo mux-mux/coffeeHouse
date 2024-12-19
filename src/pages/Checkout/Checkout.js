@@ -6,6 +6,8 @@ import Button from '../../components/Button/Button';
 import BackButton from '../../components/Button/BackButton';
 import Heading from '../../components/Heading/Heading';
 import Modal from '../../components/Modal/Modal';
+import Input from '../../components/Input/Input';
+
 import './Checkout.scss';
 
 function Checkout() {
@@ -82,44 +84,39 @@ function Checkout() {
             onSubmit={handleSubmit}
             noValidate
           >
-            <div className="form-group">
-              <label htmlFor="name">Name*</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-              />
-              {errors.name && (
-                <span className="error-message">{errors.name}</span>
-              )}
-            </div>
-            <div className="form-group">
-              <label htmlFor="email">Email*</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-              />
-              {errors.email && (
-                <span className="error-message">{errors.email}</span>
-              )}
-            </div>
-            <div className="form-group">
-              <label htmlFor="address">Address*</label>
-              <textarea
-                id="address"
-                name="address"
-                value={formData.address}
-                onChange={handleChange}
-              ></textarea>
-              {errors.address && (
-                <span className="error-message">{errors.address}</span>
-              )}
-            </div>
+            <Input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              errors={errors.name}
+              placeholder=""
+            >
+              Name*
+            </Input>
+            <Input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              errors={errors.email}
+              placeholder=""
+            >
+              Email*
+            </Input>
+            <Input
+              type="textarea"
+              id="address"
+              name="address"
+              value={formData.address}
+              onChange={handleChange}
+              errors={errors.address}
+              placeholder=""
+            >
+              Address*
+            </Input>
             <span className="checkout__required">* - required fields</span>
             <div className="checkout__summary mt2 pv2">
               <Heading as="h4">Cart Summary</Heading>
