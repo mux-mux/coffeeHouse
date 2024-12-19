@@ -53,6 +53,7 @@ function Checkout() {
       setErrors(validationErrors);
     } else {
       setErrors({});
+      setFormData({ name: '', email: '', address: '' });
       clearCart();
       setShowModal(true);
     }
