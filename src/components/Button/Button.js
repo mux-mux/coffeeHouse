@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import './Buttons.scss';
+import './Button.scss';
 
-function Buttons({
+function Button({
   as,
   variant = 'white',
   size = 'md',
@@ -33,4 +33,4 @@ function Buttons({
   }
 }
 
-export default Buttons;
+export default Button;

@@ -1,4 +1,4 @@
-import Buttons from '../Buttons/Buttons';
+import Button from '../Button/Button';
 import Header from '../Header/Header';
 import Heading from '../Heading/Heading';
 
@@ -22,9 +22,9 @@ function Promo() {
           <Heading as="h2" className="promo__text">
             Want to try our beans?
           </Heading>
-          <Buttons as="a" to="/ourcoffee" variant="white" size="lg">
+          <Button as="a" to="/ourcoffee" variant="white" size="lg">
             More
-          </Buttons>
+          </Button>
         </div>
       </div>
     </section>

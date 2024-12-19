@@ -1,9 +1,9 @@
-import Buttons from './Buttons';
-import './Buttons.scss';
+import Button from './Button';
+import './Button.scss';
 
 function BackButton({ children, as, variant, size, onClick, ...delegated }) {
   return (
-    <Buttons
+    <Button
       as={as}
       variant={variant}
       size={size}
@@ -11,7 +11,7 @@ function BackButton({ children, as, variant, size, onClick, ...delegated }) {
       {...delegated}
     >
       {children}
-    </Buttons>
+    </Button>
   );
 }
 

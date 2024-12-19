@@ -5,8 +5,8 @@ import { CartContext } from '../../context/Cart';
 import Header from '../../components/Header/Header';
 import Heading from '../../components/Heading/Heading';
 import SectionIcon from '../../components/SectionIcon/SectionIcon';
-import Buttons from '../../components/Buttons/Buttons';
-import BackButton from '../../components/Buttons/BackButton';
+import Button from '../../components/Button/Button';
+import BackButton from '../../components/Button/BackButton';
 import './ProductPage.scss';
 
 function ProductPage() {
@@ -61,7 +61,7 @@ function ProductPage() {
                     <span className="about-it__price-value">{price + '$'}</span>
                   </div>
                   <div className="about-it__button-wrapper">
-                    <Buttons
+                    <Button
                       as="button"
                       variant="black"
                       size="lg"
@@ -71,7 +71,7 @@ function ProductPage() {
                       }}
                     >
                       Add To Cart
-                    </Buttons>
+                    </Button>
                     <span className="about-it__incart">
                       {cartItems.map((item) => {
                         return item.id === id

@@ -8,7 +8,7 @@ import SectionIcon from '../components/SectionIcon/SectionIcon';
 import Search from '../components/Search/Search';
 import Filter from '../components/Filter/Filter';
 import ProductCards from '../components/ProductCards/ProductCards';
-import BackButton from '../components/Buttons/BackButton';
+import BackButton from '../components/Button/BackButton';
 
 function OurCoffee({ products }) {
   const [filter, setFilter] = useState('All');

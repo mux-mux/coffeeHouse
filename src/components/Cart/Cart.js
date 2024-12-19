@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { CartContext } from '../../context/Cart';
-import Buttons from '../Buttons/Buttons';
+import Button from '../Button/Button';
 import Heading from '../Heading/Heading';
 import './Cart.scss';
 
@@ -23,9 +23,9 @@ function Cart({ shownCart, toggleCart }) {
         <div className="cart" onClick={handleClickOnContainer}>
           <header className="cart__header">
             <Heading as="h4">Cart</Heading>
-            <Buttons as="button" variant="black" size="sm" onClick={toggleCart}>
+            <Button as="button" variant="black" size="sm" onClick={toggleCart}>
               &times;
-            </Buttons>
+            </Button>
           </header>
           <main className="cart__main">
             {cartItems.map((item) => {
@@ -42,7 +42,7 @@ function Cart({ shownCart, toggleCart }) {
                   <div className="item__ordered">
                     <span className="item__name">{name}</span>
                     <div className="item__buttons">
-                      <Buttons
+                      <Button
                         as="button"
                         variant="white"
                         size="sm"
@@ -51,9 +51,9 @@ function Cart({ shownCart, toggleCart }) {
                         }}
                       >
                         -
-                      </Buttons>
+                      </Button>
                       <p>{quantity}</p>
-                      <Buttons
+                      <Button
                         as="button"
                         variant="white"
                         size="sm"
@@ -62,7 +62,7 @@ function Cart({ shownCart, toggleCart }) {
                         }}
                       >
                         +
-                      </Buttons>
+                      </Button>
                     </div>
                     <span className="item__ordered-price">{price}$</span>
                   </div>
@@ -73,9 +73,9 @@ function Cart({ shownCart, toggleCart }) {
           {cartItems.length > 0 ? (
             <footer className="cart__footer">
               <div className="cart__total">Total: {getCartTotal()}$</div>
-              <Buttons as="a" to="/checkout" variant="black" size="lg">
+              <Button as="a" to="/checkout" variant="black" size="lg">
                 Checkout
-              </Buttons>
+              </Button>
             </footer>
           ) : (
             <div className="cart__empty">Your cart is empty</div>

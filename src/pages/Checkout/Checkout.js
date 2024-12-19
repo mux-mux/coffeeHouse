@@ -2,8 +2,8 @@ import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../../context/Cart';
 
-import Buttons from '../../components/Buttons/Buttons';
-import BackButton from '../../components/Buttons/BackButton';
+import Button from '../../components/Button/Button';
+import BackButton from '../../components/Button/BackButton';
 import Heading from '../../components/Heading/Heading';
 import Modal from '../../components/Modal/Modal';
 import './Checkout.scss';
@@ -133,9 +133,9 @@ function Checkout() {
               </ul>
               <div className="checkout__total">Total: ${getCartTotal()}</div>
             </div>
-            <Buttons as="submit" variant="black" size="lg" form="checkoutForm">
+            <Button as="submit" variant="black" size="lg" form="checkoutForm">
               Place Order
-            </Buttons>
+            </Button>
           </form>
         </div>
       </div>
