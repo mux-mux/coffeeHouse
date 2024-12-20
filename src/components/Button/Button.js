@@ -20,7 +20,7 @@ function Button({
     );
   } else if (as === 'submit') {
     return (
-      <button type="submit" className={classes} form={delegated.form}>
+      <button type="submit" className={classes} {...delegated}>
         {children}
       </button>
     );

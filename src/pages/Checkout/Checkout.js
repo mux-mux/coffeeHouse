@@ -131,7 +131,7 @@ function Checkout() {
               </ul>
               <div className="checkout__total">Total: ${getCartTotal()}</div>
             </div>
-            <Button as="submit" variant="black" size="lg" form="checkoutForm">
+            <Button as="submit" variant="black" size="lg" form="checkoutForm" disabled={showModal}>
               Place Order
             </Button>
           </form>
