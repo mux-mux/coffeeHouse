@@ -43,12 +43,14 @@
   }
 }
 .item {
+  $spacing: 8px;
+
   display: flex;
-  gap: 8px;
+  gap: $spacing;
 
   &:not(:last-of-type) {
-    margin-bottom: 8px;
-    padding-bottom: 8px;
+    margin-bottom: $spacing;
+    padding-bottom: $spacing;
     border-bottom: 1px solid #d3d3d3;
   }
 

@@ -60,7 +60,7 @@ function OurCoffee({ products }) {
           >
             Back
           </BackButton>
-          <div className="about-components mt4">
+          <div className="about-components">
             <picture className="about-components__img-wrapper">
               <source
                 type="image/webp"

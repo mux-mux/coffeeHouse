@@ -77,11 +77,11 @@ function Checkout() {
           Back
         </BackButton>
 
-        <div className="checkout mt4 mcenter">
+        <div className="checkout">
           <Heading as="h2">Checkout</Heading>
           <form
             id="checkoutForm"
-            className="checkout__form mt4"
+            className="checkout__form"
             onSubmit={handleSubmit}
             noValidate
           >
@@ -119,7 +119,7 @@ function Checkout() {
               Address*
             </Input>
             <span className="checkout__required">* - required fields</span>
-            <div className="checkout__summary mt2 pv2">
+            <div className="checkout__summary">
               <Heading as="h4">Cart Summary</Heading>
               <ul className="checkout__items">
                 {cartItems.map((item) => (

@@ -2,15 +2,25 @@
 
 .checkout {
   max-width: 500px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   background: #f9f9f9;
 
+  &__form {
+    margin-top: 40px;
+  }
+
   &__summary {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-top: 1px solid #ddd;
   }
 
