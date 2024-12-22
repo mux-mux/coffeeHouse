@@ -10,11 +10,14 @@ function Input({
   errors,
   required = false,
   children,
+  className,
   ...delagated
 }) {
   return (
     <div className="form-group">
-      <label htmlFor={id}>{children}</label>
+      <label htmlFor={id} className="form-group__label">
+        {children}
+      </label>
       {type === 'textarea' ? (
         <textarea
           id={id}
@@ -23,6 +26,7 @@ function Input({
           onChange={onChange}
           placeholder={placeholder}
           required={required}
+          className={className}
           {...delagated}
         />
       ) : (
@@ -34,10 +38,11 @@ function Input({
           onChange={onChange}
           placeholder={placeholder}
           required={required}
+          className={className}
           {...delagated}
         />
       )}
-      {errors && <span className="error-message">{errors}</span>}
+      {errors && <span className="form-group__error-message">{errors}</span>}
     </div>
   );
 }

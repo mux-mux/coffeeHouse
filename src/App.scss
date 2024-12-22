@@ -52,19 +52,17 @@ img {
 }
 
 .container {
-  @include respond(mobile) {
-    max-width: 500px;
-    @include margin-auto;
-    padding: 10px;
-  }
+  max-width: 800px;
+  @include margin-auto;
+  padding: 0 30px;
+
   @include respond(tablet) {
     max-width: 700px;
     @include margin-auto;
     padding: 0 20px;
   }
-  @include respond(laptop) {
-    max-width: 800px;
+  @include respond(mobile) {
+    max-width: 500px;
     @include margin-auto;
-    padding: 0 30px;
   }
 }

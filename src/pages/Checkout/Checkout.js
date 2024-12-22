@@ -93,6 +93,7 @@ function Checkout() {
               onChange={handleChange}
               errors={errors.name}
               placeholder=""
+              className="form-group__input"
             >
               Name*
             </Input>
@@ -104,6 +105,7 @@ function Checkout() {
               onChange={handleChange}
               errors={errors.email}
               placeholder=""
+              className="form-group__input"
             >
               Email*
             </Input>
@@ -115,6 +117,7 @@ function Checkout() {
               onChange={handleChange}
               errors={errors.address}
               placeholder=""
+              className="form-group__input"
             >
               Address*
             </Input>
@@ -131,7 +134,13 @@ function Checkout() {
               </ul>
               <div className="checkout__total">Total: ${getCartTotal()}</div>
             </div>
-            <Button as="submit" variant="black" size="lg" form="checkoutForm" disabled={showModal}>
+            <Button
+              as="submit"
+              variant="black"
+              size="lg"
+              form="checkoutForm"
+              disabled={showModal}
+            >
               Place Order
             </Button>
           </form>
