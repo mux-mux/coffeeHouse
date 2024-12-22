@@ -5,14 +5,10 @@
   &-components {
     display: grid;
     grid-template-columns: 300px 1fr;
-    align-items: end;
     gap: 80px;
     margin-top: 40px;
     padding: 0 50px;
     text-align: center;
-    &__text {
-      margin-top: 25px;
-    }
 
     @include respond(tablet) {
       padding: 0;
@@ -22,7 +18,10 @@
     @include respond(mobile) {
       justify-content: center;
       grid-template-columns: 1fr;
-      gap: revert;
+    }
+
+    &__text {
+      margin-top: 25px;
     }
   }
 
