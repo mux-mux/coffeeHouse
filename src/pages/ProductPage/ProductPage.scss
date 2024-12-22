@@ -4,7 +4,8 @@
 .about {
   &-components {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 300px 1fr;
+    align-items: end;
     gap: 80px;
     margin-top: 40px;
     padding: 0 50px;
@@ -15,9 +16,13 @@
 
     @include respond(tablet) {
       padding: 0;
+      gap: 20px;
+    }
+
+    @include respond(mobile) {
       justify-content: center;
       grid-template-columns: 1fr;
-      gap: 40px;
+      gap: revert;
     }
   }
 
