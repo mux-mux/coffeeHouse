@@ -1,4 +1,5 @@
 @import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
 
 .about {
   &-components {
@@ -11,10 +12,23 @@
     &__text {
       margin-top: 25px;
     }
+
+    @include respond(tablet) {
+      padding: 0;
+      justify-content: center;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
   }
 
   &_us {
     text-align: center;
+
+    &__text {
+      @include respond(tablet) {
+        padding: 0;
+      }
+    }
   }
 
   &-it {
@@ -57,22 +71,5 @@
     height: 1px;
     background-color: #000;
     margin: 0 auto;
-  }
-}
-
-@media only screen and (max-width: $md) {
-  .about {
-    &_us {
-      &__text {
-        padding: 0;
-      }
-    }
-
-    &-components {
-      padding: 0;
-      justify-content: center;
-      grid-template-columns: 1fr;
-      gap: 40px;
-    }
   }
 }

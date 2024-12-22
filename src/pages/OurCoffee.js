@@ -41,8 +41,8 @@ function OurCoffee({ products }) {
   return (
     <>
       <section className="promo promo-ourcoffee">
-        <Header color="white" />
         <div className="container">
+          <Header color="white" />
           <div className="section promo__content">
             <Heading as="h2" className="promo__header">
               Our Coffee

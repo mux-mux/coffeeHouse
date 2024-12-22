@@ -17,7 +17,7 @@ function Home({ threeBest }) {
         <div className="container">
           <Heading as="h3">About Us</Heading>
           <SectionIcon color="black" />
-          <Paragraph className="paragraph ph10 mt4">
+          <Paragraph className="paragraph paragraph__about mt4">
             Welcome to our coffee beans webstore, your ultimate destination for
             premium coffee beans that elevate your daily brew. We specialize in
             delivering the finest coffee selections to satisfy every coffee

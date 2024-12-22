@@ -9,8 +9,8 @@ import SectionIcon from '../SectionIcon/SectionIcon';
 function Promo() {
   return (
     <section className="promo promo-main">
-      <Header color="white" />
       <div className="container">
+        <Header color="white" />
         <div className="section promo__content">
           <Heading as="h1" className="promo__header">
             Everything You Love About Coffee

@@ -1,5 +1,6 @@
 @import './utils/variables.scss';
 @import './utils/utilities.scss';
+@import './utils/mixins.scss';
 
 @font-face {
   font-family: 'Merienda';
@@ -48,4 +49,22 @@ img {
 
 .section {
   padding: 40px 0 80px 0;
+}
+
+.container {
+  @include respond(mobile) {
+    max-width: 500px;
+    @include margin-auto;
+    padding: 10px;
+  }
+  @include respond(tablet) {
+    max-width: 700px;
+    @include margin-auto;
+    padding: 0 20px;
+  }
+  @include respond(laptop) {
+    max-width: 800px;
+    @include margin-auto;
+    padding: 0 30px;
+  }
 }

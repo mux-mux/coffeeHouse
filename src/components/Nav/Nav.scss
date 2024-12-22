@@ -1,10 +1,15 @@
 @import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
 
 .nav {
   &__list {
     display: flex;
     align-items: flex-end;
     gap: 40px;
+
+    @include respond(mobile) {
+      justify-content: center;
+    }
   }
 
   &__link {
@@ -15,14 +20,6 @@
     }
     &-black {
       color: #000;
-    }
-  }
-}
-
-@media only screen and (max-width: $sm) {
-  .nav {
-    &__list {
-      justify-content: center;
     }
   }
 }

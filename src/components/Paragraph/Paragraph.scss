@@ -1,5 +1,17 @@
 @import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
+
 .paragraph {
   font-size: $font-size-sm;
   line-height: 20px;
+
+  &__about {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  @include respond(tablet) {
+    padding-left: revert;
+    padding-right: revert;
+  }
 }

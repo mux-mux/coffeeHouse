@@ -1,4 +1,5 @@
 @import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
 
 .filter {
   &__options {
@@ -18,16 +19,12 @@
   }
   &__label {
     margin-right: 30px;
+
+    @include respond(mobile) {
+      display: none;
+    }
   }
   &_active {
     background: #eaddca;
-  }
-}
-
-@media only screen and (max-width: $xsm) {
-  .filter {
-    &__label {
-      display: none;
-    }
   }
 }
