@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Promo from '../components/Promo/Promo';
+import Promo from './Promo/Promo';
 import SectionIcon from '../components/SectionIcon/SectionIcon';
 import Heading from '../components/Heading/Heading';
 import Paragraph from '../components/Paragraph/Paragraph';

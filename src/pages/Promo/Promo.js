@@ -1,10 +1,9 @@
-import Button from '../Button/Button';
-import Header from '../Header/Header';
-import Heading from '../Heading/Heading';
+import Button from '../../components/Button/Button';
+import Header from '../../components/Header/Header';
+import Heading from '../../components/Heading/Heading';
+import SectionIcon from '../../components/SectionIcon/SectionIcon';
 
 import './Promo.scss';
-import '../SectionIcon/SectionIcon.scss';
-import SectionIcon from '../SectionIcon/SectionIcon';
 
 function Promo() {
   return (
