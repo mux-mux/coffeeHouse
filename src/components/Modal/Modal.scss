@@ -17,8 +17,8 @@
   }
 
   &-content {
-    background: #fff;
-    padding: 20px;
+    background: $color-primary;
+    padding: $padding-md;
     border-radius: 8px;
     width: 400px;
     max-width: 90%;
@@ -34,29 +34,28 @@
   }
 
   &-title {
-    margin: 0;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: $padding-md;
+    padding-right: $padding-md;
     font-size: $font-size-xlg;
-    margin-bottom: 10px;
     word-break: break-word;
   }
 
   &-message {
+    margin-top: $margin-top-md;
     display: block;
     font-size: $font-size-md;
-    color: #333;
+    color: $color-secondary;
   }
 
   &-success {
-    border-top: 5px solid #28a745;
-  }
-
-  &-info {
-    border-top: 5px solid #17a2b8;
+    border-top: 5px solid $color-success;
   }
 
   &-danger {
-    border-top: 5px solid #dc3545;
+    border-top: 5px solid $color-danger;
+  }
+
+  &-info {
+    border-top: 5px solid $color-info;
   }
 }

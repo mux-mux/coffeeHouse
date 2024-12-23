@@ -1,27 +1,29 @@
 @import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
 
 .checkout {
   max-width: 500px;
-  margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-  border: 1px solid #ddd;
+  margin-top: $margin-top-lg;
+  @include margin-auto;
+  padding: $padding-md;
+  border: 1px solid $color-light-gray;
   border-radius: 8px;
-  background: #f9f9f9;
+  background: $color-gray-lightnent;
 
   &__form {
-    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-md;
+    margin-top: $margin-top-lg;
   }
 
   &__summary {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    margin-top: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-top: 1px solid #ddd;
+    gap: $gap-md;
+    padding-top: $padding-md;
+    padding-bottom: $padding-md;
+    border-top: 1px solid $color-light-gray;
   }
 
   &__required {
@@ -39,6 +41,6 @@
   &__item:not(:first-of-type) {
     margin-top: 2px;
     padding-top: 2px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid $color-light-gray;
   }
 }

@@ -1,23 +1,28 @@
+@import '../../utils/variables.scss';
+
 .divider {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  gap: $gap-md;
+  margin-top: $margin-top-md;
+
   &::after,
   &::before {
     content: '';
     display: inline-block;
-    margin: 0 20px;
     width: 60px;
     height: 1px;
   }
+
   &_white::after,
   &_white::before {
-    background-color: #fff;
+    background-color: $color-primary;
   }
+
   &_black::after,
   &_black::before {
-    background-color: #000;
+    background-color: $color-secondary;
   }
 
   &__icon {

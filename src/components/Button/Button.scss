@@ -1,44 +1,46 @@
+@import '../../utils/variables.scss';
+
 .button {
   display: inline-block;
   transition: all 0.5s;
   cursor: pointer;
 
   &-black {
-    background-color: #333;
-    color: #fff;
+    background-color: $color-secondary;
+    color: $color-primary;
     border: none;
 
     &:hover {
-      background-color: #555;
+      background-color: $color-dark-gray;
     }
 
     &:active {
-      box-shadow: inset -1px -1px 3px #fff;
+      box-shadow: inset -1px -1px 3px $color-primary;
     }
   }
 
   &-white {
-    background-color: #fff;
-    color: #333;
-    border: 1px solid #ccc;
+    background-color: $color-primary;
+    color: $color-secondary;
+    border: 1px solid $color-light-gray;
 
     &:hover {
-      border: 1px solid #ccc;
+      border: 1px solid $color-light-gray;
       box-shadow: inset 0px 0px 24px 0px rgba(184, 184, 184, 1);
     }
 
     &:active {
-      box-shadow: inset -1px -1px 2px #999;
+      box-shadow: inset -1px -1px 2px $color-gray;
     }
   }
 
   &-lg {
-    padding: 12px 30px;
+    padding: $padding-sm $padding-lg;
     border-radius: 3px;
   }
 
   &-md {
-    padding: 4px 8px;
+    padding: $padding-xsm $padding-sm;
     border-radius: 2px;
   }
   &-sm {

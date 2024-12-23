@@ -151,7 +151,7 @@ function Checkout() {
           type="success"
           title="Success!"
           onClose={closeModal}
-          timeout={5000}
+          timeout={115000}
         >
           <Heading as="h3">Thank you for your purchase!</Heading>
           <span>Your order has been placed successfully.</span>

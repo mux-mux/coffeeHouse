@@ -2,15 +2,21 @@
 @import '../../utils/mixins.scss';
 
 .filter {
+  display: flex;
+  align-items: baseline;
+  gap: $gap-sm;
+
   &__options {
-    display: inline-flex;
-    gap: 5px;
+    display: flex;
+    gap: $gap-sm;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   &__option {
     width: 75px;
     height: 30px;
     border: none;
-    background: #ffffff;
+    background: $color-primary;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
     border-radius: 4px 0px 0px 4px;
     font-size: $font-size-xsm;
@@ -18,13 +24,11 @@
     cursor: pointer;
   }
   &__label {
-    margin-right: 30px;
-
     @include respond(mobile) {
       display: none;
     }
   }
   &_active {
-    background: #eaddca;
+    background: $color-active;
   }
 }

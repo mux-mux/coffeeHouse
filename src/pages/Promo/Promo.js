@@ -21,7 +21,13 @@ function Promo() {
           <Heading as="h2" className="promo__text">
             Want to try our beans?
           </Heading>
-          <Button as="a" to="/ourcoffee" variant="white" size="lg">
+          <Button
+            as="a"
+            to="/ourcoffee"
+            variant="white"
+            size="lg"
+            className="mt2"
+          >
             More
           </Button>
         </div>

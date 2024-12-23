@@ -2,20 +2,19 @@
 
 .form-group {
   position: relative;
-  margin-bottom: 30px;
 
   &__label {
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    line-height: 1.5;
+    font-weight: 700;
   }
 
   &__input {
     box-sizing: border-box;
     display: block;
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
+    padding: $padding-sm;
+    border: 1px solid $color-light-gray;
     border-radius: 4px;
   }
 

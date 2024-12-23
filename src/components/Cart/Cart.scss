@@ -17,24 +17,26 @@
   z-index: 100;
 }
 .cart {
+  $spacing: 16px;
+
   @include absolute-position-full-height;
   right: 0;
-  background-color: #fff;
-  color: #333;
-  padding: 0 16px;
+  background-color: $color-primary;
+  color: $color-secondary;
+  padding: 0 $spacing;
 
   &__header,
   &__footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #d3d3d3;
-    margin: 0 -16px;
-    padding: 8px;
+    background-color: $color-light-gray;
+    margin: 0 (-$spacing);
+    padding: calc($spacing / 2);
   }
 
   &__main {
-    padding: 16px 0;
+    padding: $spacing 0;
   }
 
   &__total,
@@ -51,7 +53,7 @@
   &:not(:last-of-type) {
     margin-bottom: $spacing;
     padding-bottom: $spacing;
-    border-bottom: 1px solid #d3d3d3;
+    border-bottom: 1px solid $color-light-gray;
   }
 
   &__image {
@@ -67,7 +69,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 8px;
+    gap: $spacing;
 
     &-price {
       font-size: $font-size-lg;
@@ -77,6 +79,6 @@
   &__buttons {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: $spacing;
   }
 }

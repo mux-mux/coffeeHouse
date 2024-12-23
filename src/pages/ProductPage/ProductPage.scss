@@ -6,13 +6,13 @@
     display: grid;
     grid-template-columns: 300px 1fr;
     gap: 80px;
-    margin-top: 40px;
-    padding: 0 50px;
+    margin-top: $margin-top-lg;
+    padding: 0 $padding-xl;
     text-align: center;
 
     @include respond(tablet) {
       padding: 0;
-      gap: 20px;
+      gap: $gap-md;
     }
 
     @include respond(mobile) {
@@ -21,7 +21,7 @@
     }
 
     &__text {
-      margin-top: 25px;
+      margin-top: $margin-top-md;
     }
   }
 
@@ -37,20 +37,20 @@
 
   &-it {
     padding: 0;
-    gap: 55px;
+    gap: $gap-lg;
     &__wrapper {
       text-align: left;
-      margin-top: 25px;
+      margin-top: $margin-top-md;
       font-size: $font-size-sm;
     }
     &__text {
-      margin: 16px 0;
-      line-height: 20px;
+      margin: $margin-top-md 0;
+      line-height: 1.5;
     }
     &__price {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: $gap-sm;
 
       &-value {
         font-size: $font-size-xlg;
@@ -73,7 +73,7 @@
   &__divider {
     width: 240px;
     height: 1px;
-    background-color: #000;
-    margin: 0 auto;
+    background-color: $color-secondary;
+    @include margin-auto;
   }
 }

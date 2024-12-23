@@ -2,13 +2,15 @@
 @import '../../utils/mixins.scss';
 
 .search {
+  display: flex;
+  align-items: baseline;
+  gap: $gap-sm;
+
   &-filter__label {
     font-size: $font-size-sm;
-    color: #000;
+    color: $color-secondary;
   }
   &__label {
-    margin-right: 10px;
-
     @include respond(mobile) {
       display: none;
     }
@@ -18,7 +20,7 @@
     height: 30px;
     border: none;
 
-    padding: 0 5px;
+    padding: 0 $padding-xsm;
 
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
@@ -30,12 +32,13 @@
   &-filter__wrapper {
     display: flex;
     justify-content: space-between;
-    margin: 60px auto 0;
     align-items: center;
+    flex-wrap: wrap;
+    margin-top: $margin-top-lg;
 
     @include respond(tablet) {
       flex-direction: column;
-      gap: 40px;
+      gap: $gap-lg;
     }
   }
 }

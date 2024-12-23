@@ -1,3 +1,5 @@
+@import '../../utils/variables.scss';
+
 .shopping {
   position: relative;
 
@@ -10,10 +12,10 @@
     height: 32px;
 
     &-white {
-      fill: #fff;
+      fill: $color-primary;
     }
     &-black {
-      fill: #000;
+      fill: $color-secondary;
     }
   }
   &__count {

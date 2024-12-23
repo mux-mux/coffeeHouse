@@ -3,11 +3,11 @@
 
 .paragraph {
   font-size: $font-size-sm;
-  line-height: 20px;
+  line-height: 1.5;
 
   &__about {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: $padding-xxl;
+    padding-right: $padding-xxl;
   }
 
   @include respond(tablet) {

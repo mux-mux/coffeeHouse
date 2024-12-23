@@ -1,18 +1,21 @@
 @import '../../utils/variables.scss';
 
 .products {
-  margin-top: 40px;
+  margin-top: $margin-top-lg;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 70px;
+  gap: $gap-lg;
   text-align: right;
 
   &__item {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-sm;
     box-sizing: border-box;
-    color: #000;
+    color: $color-secondary;
     width: 220px;
-    padding: 22px 20px;
+    padding: $padding-md;
     border-radius: 8px;
     font-size: $font-size-sm;
   }
@@ -22,21 +25,13 @@
   }
 
   &__search {
-    padding-top: 37px;
-    background-color: #fff;
+    padding-top: $padding-xl;
+    background-color: $color-primary;
     filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
-  }
-
-  &__name {
-    margin: 10px 0 15px 0;
   }
 
   &__price {
     font-weight: 700;
-  }
-
-  &__country {
-    margin-bottom: 14px;
   }
 
   &__our-best {

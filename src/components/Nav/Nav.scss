@@ -5,7 +5,7 @@
   &__list {
     display: flex;
     align-items: flex-end;
-    gap: 40px;
+    gap: $gap-lg;
 
     @include respond(mobile) {
       justify-content: center;
@@ -16,10 +16,10 @@
     font-size: $font-size-xsm;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     &-white {
-      color: #fff;
+      color: $color-primary;
     }
     &-black {
-      color: #000;
+      color: $color-secondary;
     }
   }
 }

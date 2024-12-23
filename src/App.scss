@@ -17,7 +17,7 @@
 
 body {
   max-width: 1440px;
-  margin: 0 auto;
+  @include margin-auto;
 }
 ul {
   list-style: none;
@@ -48,18 +48,18 @@ img {
 }
 
 .section {
-  padding: 40px 0 80px 0;
+  padding: $padding-xl 0 $padding-xxl 0;
 }
 
 .container {
   max-width: 800px;
   @include margin-auto;
-  padding: 0 30px;
+  padding: 0 $padding-lg;
 
   @include respond(tablet) {
     max-width: 700px;
     @include margin-auto;
-    padding: 0 20px;
+    padding: 0 $padding-md;
   }
   @include respond(mobile) {
     max-width: 500px;
