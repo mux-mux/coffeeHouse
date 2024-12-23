@@ -1,6 +1,6 @@
 # CoffeeHouse :coffee:
 
-## Amazing React Coffee shop App :star::star::star::star::star:
+## Amazing React Coffee beans shop App :star::star::star::star::star:
 
 ## [Live Link](https://jsgo.pro/coffeehouse) :link:
 
@@ -13,23 +13,15 @@
 
 ## Stages :scroll:
 
-0. mock up
-1. html_structure
-2. section styles
-3. nav
-4. header
-5. our_best
-6. promo
-7. footer
-8. our_coffee_page
-9. product_cards
-10. filter
-11. search
-12. responsive
-13. routing
-14. product_page
-15. json_service
-16. hooks (location, state, effect, navigate)
+0. HTML structure from Figma mock up
+1. SCSS styles from Figma mock up
+2. React components from HTML chunks
+3. Fetch service to Fetch items
+4. Pages and use of React Router
+5. Cart component
+6. Checkout page
+7. Modal component
+8. Fixes and refactoring
 
 ## Folder structure :open_file_folder:
 
