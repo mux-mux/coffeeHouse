@@ -1,7 +1,8 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import getItems from './services/ItemsService';
 
+import NoMatch from './pages/NoMatch';
 import Layout from './pages/Layout';
 import OurCoffee from './pages/OurCoffee';
 import Home from './pages/Home';
@@ -20,16 +21,17 @@ function App() {
   const threeBest = items.slice(0, 3);
 
   return (
-    <BrowserRouter>
+    <>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home threeBest={threeBest} />} />
-          <Route path="/ourcoffee" element={<OurCoffee products={items} />} />
-          <Route path="/productpage" element={<ProductPage />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path="ourcoffee" element={<OurCoffee products={items} />} />
+          <Route path="productpage" element={<ProductPage />} />
+          <Route path="checkout" element={<Checkout />} />
         </Route>
+        <Route path="*" element={<NoMatch />} />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
 

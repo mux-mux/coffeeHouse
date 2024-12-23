@@ -4,11 +4,7 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-top: $padding-sm;
   padding-bottom: $padding-sm;
-
-  @include respond(mobile) {
-    justify-content: space-between;
-  }
 }
