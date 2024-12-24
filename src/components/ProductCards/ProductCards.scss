@@ -1,6 +1,7 @@
 @import '../../utils/variables.scss';
 
 .products {
+  min-height: 350px;
   margin-top: $margin-top-lg;
   display: flex;
   justify-content: center;
