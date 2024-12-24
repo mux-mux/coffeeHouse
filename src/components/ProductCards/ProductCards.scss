@@ -1,7 +1,6 @@
 @import '../../utils/variables.scss';
 
 .products {
-  min-height: 350px;
   margin-top: $margin-top-lg;
   display: flex;
   justify-content: center;
@@ -44,5 +43,9 @@
       '../../../public/resources/bgs/webp/Bg_Best.webp' type('image/webp'),
       '../../../public/resources/bgs/Bg_Best.jpg' type('image/jpeg')
     );
+  }
+
+  &-page {
+    min-height: 800px;
   }
 }
