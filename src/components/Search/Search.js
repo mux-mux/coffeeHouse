@@ -3,9 +3,12 @@ import './Search.scss';
 function Search({ query }) {
   return (
     <section className="search">
-      <span className="search-filter-label search__label">Lookiing for</span>
+      <label htmlFor="search" className="search-filter-label search__label">
+        Lookiing for
+      </label>
       <input
         type="text"
+        id="search"
         className="search__input"
         placeholder="find your coffee..."
         onChange={(e) => query(e.currentTarget.value)}

@@ -13,6 +13,8 @@ $font-size-h6: calc(18px / 16px) + rem;
 
 $margin-top-lg: 40px;
 $margin-top-md: 20px;
+$margin-top-sm: 10px;
+$margin-top-xsm: 5px;
 
 $gap-sm: 10px;
 $gap-md: 20px;
@@ -30,8 +32,9 @@ $color-secondary: #333;
 $color-dark-gray: #666;
 $color-gray: #999;
 $color-light-gray: #ccc;
+$color-gray-lightnent: #f9f9f9;
 $color-active: #eaddca;
 $color-success: #28a745;
-$color-danger: #dc3545;
+$color-danger: #f00;
 $color-info: #17a2b8;
-$color-gray-lightnent: #f9f9f9;
+$color-count: #d70040;
