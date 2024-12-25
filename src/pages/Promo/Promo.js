@@ -28,7 +28,7 @@ function Promo() {
             size="lg"
             className="mt2"
           >
-            More
+            Choose your beans
           </Button>
         </div>
       </div>
