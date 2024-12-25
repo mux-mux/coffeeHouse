@@ -17,6 +17,7 @@
   z-index: 100;
 }
 .cart {
+  min-width: 305px;
   $spacing: 16px;
 
   @include absolute-position-full-height;
