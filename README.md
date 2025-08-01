@@ -11,18 +11,6 @@
   <br>
 </div>
 
-## Stages :scroll:
-
-0. HTML structure from Figma mock up
-1. SCSS styles from Figma mock up
-2. React components from HTML chunks
-3. Fetch service to Fetch items
-4. Pages and use of React Router
-5. Cart component
-6. Checkout page
-7. Modal component
-8. Fixes and refactoring
-
 ## Folder structure :open_file_folder:
 
 <div align="center">
