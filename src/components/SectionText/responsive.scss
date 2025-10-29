@@ -1,0 +1,14 @@
+@import '../../variables.scss';
+
+@media only screen and (max-width: $md) {
+  .about_us__text {
+    padding: 0;
+  }
+  .about-components {
+    padding: 0;
+    justify-content: center;
+    &__img-wrapper {
+      display: none;
+    }
+  }
+}

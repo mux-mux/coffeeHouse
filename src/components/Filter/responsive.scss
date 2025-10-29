@@ -1,0 +1,7 @@
+@import '../../variables.scss';
+
+@media only screen and (max-width: $xsm) {
+  .filter span {
+    display: none;
+  }
+}

@@ -1,0 +1,49 @@
+.button {
+  display: inline-block;
+  transition: all 0.5s;
+  cursor: pointer;
+
+  &-black {
+    background-color: #333;
+    color: #fff;
+    border: none;
+
+    &:hover {
+      background-color: #555;
+    }
+
+    &:active {
+      box-shadow: inset -1px -1px 3px #fff;
+    }
+  }
+
+  &-white {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+
+    &:hover {
+      border: 1px solid #ccc;
+      box-shadow: inset 0px 0px 24px 0px rgba(184, 184, 184, 1);
+    }
+
+    &:active {
+      box-shadow: inset -1px -1px 2px #999;
+    }
+  }
+
+  &-lg {
+    padding: 12px 30px;
+    border-radius: 3px;
+  }
+
+  &-md {
+    padding: 4px 8px;
+    border-radius: 2px;
+  }
+  &-sm {
+    border-radius: 2px;
+    width: 32px;
+    height: 32px;
+  }
+}
